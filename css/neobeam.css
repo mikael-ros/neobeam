@@ -1,26 +1,77 @@
 /* @theme neobeam */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import "default";
 
 :root{
+    /* -- Variables -- */
     /* Generated with mycolor.space */
     --primary: #4d85d1;
     --darker-primary: #266ab2; /* Shades 1 */
     --darkest-primary: #004f95; /* Shades 2 */
 
-    --text-color-negative: white;
-}
+    --text-color: #101423;
+    --text-color-lighter: #202534;
+    --text-color-lightest: #404756;
 
-* {
+    --text-color-negative-lighter: #EAF1F1;
+    --text-color-negative: #D9DFEF;
+    --text-color-negative-darker: #A6ACBC;
+
+    --border-radius: 0.5em;
+
+    /* -- Presentation wide default */
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+    font-family: "Roboto";
+    font-size: 30px;
+    color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color: var(--text-color);
+}
+
+p{
+    color: var(--text-color-lighter)
+}
+
+blockquote p{
+    color: var(--text-color-lightest)
 }
 
 /* ............ */
 /* | Sections | */
 /* ```````````` */
 
+section {
+    background-color: var(--text-color-negative-lighter);
+}
+
+section h1:first-of-type{
+    position: absolute;
+    top: 0;
+
+    padding: .5em;
+
+    width: 100%;
+    min-height: 2rem;
+
+    line-height: 2rem;
+
+    background-color: var(--darker-primary);
+    color: var(--text-color-negative);
+    opacity: 0.9;
+}
+
+/* The index */
 section::after{
     color: var(--text-color-negative);
     position: absolute;
@@ -74,4 +125,45 @@ footer strong:nth-of-type(3){
     padding-right: calc(2% + 0.5em);
     text-align: right;
     background-color: var(--primary);
+}
+
+/* -------------------------------------------------------- */
+/* Specific classes                                         */
+/* -------------------------------------------------------- */
+
+/* ......... */
+/* | Title | */
+/* ````````` */
+
+section.title h1,
+section.title h2,
+section.title h3,
+section.title p{
+    position: relative;
+    text-align: center;
+    font-weight: 500;
+}
+
+section.title p{
+    font-weight: initial;
+}
+
+section.title h1:first-of-type{
+    margin: 0 auto;
+
+    width: 80%;
+    min-height: 2.5rem;
+
+    line-height: 2.5rem;
+
+    border-radius: var(--border-radius);
+}
+
+section.title h3 ~ p{
+    margin: -0.5em auto;
+}
+
+section.title blockquote{
+    margin: 1rem auto;
+    border: none; /* Removes the blockquote border */
 }
