@@ -28,7 +28,7 @@
     --highlight-color-three: #009d99;
     --highlight-color-three-background: #009d99aa;
 
-    --border-radius: 0.5em;
+    --border-radius: 0.75rem;
 
     --default-font: "Roboto";
     --monospace-font: "Roboto Mono";
@@ -68,10 +68,13 @@ ul, ol{
 }
 
 blockquote {
-    max-width: 80%;
+    min-width: 10%;
+    max-width: 60%;
     margin-left: 1rem;
     padding: .5em;
     border-radius: var(--border-radius);
+    border-color: var(--text-color-negative-darker);
+    background-color: var(--text-color-negative);
 }
 
 blockquote *{
@@ -88,10 +91,11 @@ blockquote h4, blockquote h4+p{
 blockquote:has(> h4){
     padding: 0;
     border: none;
+    background-color: var(--highlight-color-one-background);
 }
 
 blockquote h4{
-    width: 100%;
+    width: calc(100% - 1em);
     height: 1.25em;
     padding: .5em;
     margin: 0;
@@ -99,17 +103,13 @@ blockquote h4{
     line-height: 1.25em;
     background-color: var(--highlight-color-one);
     
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 blockquote h4+p{
     width: 100%;
-    min-height: 2em;
-    margin: -2.25em 0 0 0;
-    padding: 2.75em .5em 0 .5em;
-    line-height: 1em;
-    background-color: var(--highlight-color-one-background);
-    border-radius: var(--border-radius);
+    margin: 0;
+    padding: 0.5em;
 }
 
 blockquote:nth-of-type(2) h4{
@@ -144,7 +144,8 @@ pre, code{
 pre {
     margin-left: 1rem;
     padding: 1em;
-    width: 80%;
+    min-width: 20%;
+    max-width: 70%;
     min-height: 10%;
     max-height: 40%; overflow: hidden; /* To avoid it squeezing out the slide */
 
@@ -163,7 +164,7 @@ pre {
 
 /* Tables */
 table {
-    margin: 0 auto;
+    margin-left: 1rem;
 
     border-radius: var(--border-radius);
     
@@ -227,7 +228,7 @@ section {
     background-color: var(--text-color-negative-lighter);
 }
 
-section h1:first-of-type{
+section>h1:first-of-type{
     position: absolute;
     top: 0;
 
@@ -370,6 +371,7 @@ section.title blockquote{
     margin: 1rem auto;
     padding: 0;
     border: none; /* Removes the blockquote border */
+    background-color: transparent; 
 }
 
 section.title blockquote *{
@@ -392,11 +394,6 @@ section.title blockquote h4{
 
 section.title blockquote h4+p{
     width: initial;
-    min-height: initial;
-    margin: initial;
-    padding: initial;
-    line-height: initial;
-    background-color: none;
 }
 
 section.title blockquote:nth-of-type(2) h4{
