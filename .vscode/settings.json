@@ -1,6 +1,6 @@
 {
     "markdown.marp.themes": [
-        "css/neobeam.css"
+        "css/neobeam.css",
     ],
     "markdown.marp.enableHtml": true,
     "markdown.marp.exportType": "html",

@@ -7,28 +7,27 @@
 
 :root{
     /* -- Variables -- */
-    /* Colors enerated with mycolor.space */
-    --lighter-primary: #6fa7f3;
-    --primary: #4d85d1;
-    --darker-primary: #266ab2; /* Shades 1 */
-    --darkest-primary: #004f95; /* Shades 2 */
-
-    --text-color: #101423;
-    --text-color-lighter: #202534;
-    --text-color-lightest: #404756;
-
-    --text-color-negative-lightest: #f7ffff;
-    --text-color-negative-lighter: #EAF1F1;
-    --text-color-negative: #D9DFEF;
-    --text-color-negative-darker: #A6ACBC;
-
-    --highlight-color-one: var(--primary);
-    --highlight-color-one-background: #4d84d1aa;
-    --highlight-color-two: #cc682d;
-    --highlight-color-two-background: #cc682daa;
-    --highlight-color-three: #009d99;
-    --highlight-color-three-background: #009d99aa;
-
+     /* Colors enerated with mycolor.space */
+     --lighter-primary: #6fa7f3;
+     --primary: #4d85d1;
+     --darker-primary: #266ab2; /* Shades 1 */
+     --darkest-primary: #004f95; /* Shades 2 */
+ 
+     --text-color: #101423;
+     --text-color-lighter: #202534;
+     --text-color-lightest: #404756;
+ 
+     --text-color-negative-lightest: #f7ffff;
+     --text-color-negative-lighter: #EAF1F1;
+     --text-color-negative: #D9DFEF;
+     --text-color-negative-darker: #A6ACBC;
+ 
+     --highlight-color-one: var(--primary);
+     --highlight-color-one-background: #4d84d1aa;
+     --highlight-color-two: #cc682d;
+     --highlight-color-two-background: #cc682daa;
+     --highlight-color-three: #009d99;
+     --highlight-color-three-background: #009d99aa;
     --border-radius: 0.8rem;
 
     --default-font: "Roboto";
