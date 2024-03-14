@@ -1,5 +1,5 @@
 # N<sub>E</sub>Obeam
-## A modern take on LaTeX beamer 
+## ✨️A modern take on LaTeX beamer 
 ### A Marp theme
 
 Find the classic beamer outdated? Are your students losing focus due to it? 💤
@@ -9,7 +9,7 @@ I'm not sure how to solve the last one, but this theme is my attempt to address 
 _[Marp]() is a presentation framework that allows users to create presentations with Markdown and CSS. While this theme relies on Marp to be used, it is not directly affiliated with or sponsored by it._
 
 ---
-## Previews
+## 📺 Previews
 Neobeam vs beamer
 
 ### Main title
@@ -22,7 +22,7 @@ Neobeam vs beamer
 
 ---
 
-## Usage
+## ⌨️ Usage
 > ! Until a future timepoint, I won't provide a guide on how to use it with Marp CLI, as I expect CLI users to be technical enough to know how to do this.
 ### 🛠 Prerequisites
 - Git or zip
@@ -63,7 +63,7 @@ Simply clone or fork this repo or download the release. If you wish, you can del
 
 ---
 
-## Features & quirks
+## 🪄 Features & quirks
 Most things work like you'd expect, but there are some quirks to keep the cogs turning.
 ### Title slide
 I opted not to always treat the first slide as a title slide, so to declare a slide (any slide actually) a title slide, add the following before the content: ``<!-- _class: title -->``. 
