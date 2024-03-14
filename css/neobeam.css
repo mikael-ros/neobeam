@@ -1,11 +1,13 @@
 /* @theme neobeam */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Math&display=swap');
 @import "default";
 
 :root{
     /* -- Variables -- */
-    /* Generated with mycolor.space */
+    /* Colors enerated with mycolor.space */
     --primary: #4d85d1;
     --darker-primary: #266ab2; /* Shades 1 */
     --darkest-primary: #004f95; /* Shades 2 */
@@ -14,21 +16,30 @@
     --text-color-lighter: #202534;
     --text-color-lightest: #404756;
 
+    --text-color-negative-lightest: #f7ffff;
     --text-color-negative-lighter: #EAF1F1;
     --text-color-negative: #D9DFEF;
     --text-color-negative-darker: #A6ACBC;
 
     --border-radius: 0.5em;
 
+    --default-font: "Roboto";
+    --monospace-font: "Roboto Mono";
+    --math-font: "Noto Sans Math";
+
     /* -- Presentation wide default */
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 
-    font-family: "Roboto";
+    font-family: var(--default-font);
     font-size: 30px;
     color: var(--text-color);
 }
+
+/* ..................... */
+/* | Specific elements | */
+/* ````````````````````` */
 
 h1,
 h2,
@@ -36,15 +47,97 @@ h3,
 h4,
 h5,
 h6{
+    margin-left: 1em;
     color: var(--text-color);
 }
 
 p{
+    margin-left: 1em;
     color: var(--text-color-lighter)
 }
 
 blockquote p{
     color: var(--text-color-lightest)
+}
+
+/* Code block, math, table */
+pre, .katex, table{
+    color: var(--text-color-lighter);
+}
+
+pre {
+    margin: 0 auto;
+    padding: 1em;
+    width: 80%;
+    min-height: 10%;
+    max-height: 40%; overflow: hidden; /* To avoid it squeezing out the slide */
+
+    border-radius: var(--border-radius);
+    background-color: var(--text-color-negative);
+    font-family: var(--monospace-font);
+    font-size: 0.75em;
+    
+    opacity: 0.9;
+}
+
+.katex {
+    font-family: var(--math-font);
+    font-size: 0.9em;
+}
+
+/* Tables */
+table {
+    margin: 0 auto;
+
+    border-radius: var(--border-radius);
+    
+    opacity: 0.9;
+}
+
+th{
+    background-color: var(--text-color-negative);
+    border-bottom-width: 2px;
+}
+
+table th:first-of-type{
+    border-top-left-radius: var(--border-radius);
+}
+
+table th:last-of-type{
+    border-top-right-radius: var(--border-radius);
+}
+
+table tr:nth-of-type(2n-1){
+    background-color: var(--text-color-negative-lightest);
+}
+
+table tr:nth-of-type(2n){
+    background-color: var(--text-color-negative-lighter);
+}
+
+table tr:last-of-type{
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+/* Images */
+img {
+    display: block;
+    max-width: 50%;
+    margin: .5em 1em .5em 0;
+
+    border-radius: var(--border-radius);
+}
+
+img[alt~="left"]{
+    float:left;
+}
+
+img[alt~="center"]{
+    margin: 0 auto;
+}
+
+img[alt~="right"]{
+    float:right;
 }
 
 /* ............ */
@@ -59,6 +152,7 @@ section h1:first-of-type{
     position: absolute;
     top: 0;
 
+    margin-left: 0;
     padding: .5em;
 
     width: 100%;
@@ -141,6 +235,7 @@ section.title h3,
 section.title p{
     position: relative;
     text-align: center;
+    margin-left: 0;
     font-weight: 500;
 }
 

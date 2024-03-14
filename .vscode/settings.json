@@ -1,5 +1,8 @@
 {
     "markdown.marp.themes": [
         "css/neobeam.css"
-    ]
+    ],
+    "markdown.marp.enableHtml": true,
+    "markdown.marp.exportType": "html",
+    "markdown.marp.mathTypesetting": "katex"
 }
