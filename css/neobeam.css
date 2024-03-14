@@ -21,6 +21,13 @@
     --text-color-negative: #D9DFEF;
     --text-color-negative-darker: #A6ACBC;
 
+    --highlight-color-one: var(--primary);
+    --highlight-color-one-background: #4d84d1aa;
+    --highlight-color-two: #cc682d;
+    --highlight-color-two-background: #cc682daa;
+    --highlight-color-three: #009d99;
+    --highlight-color-three-background: #009d99aa;
+
     --border-radius: 0.5em;
 
     --default-font: "Roboto";
@@ -33,7 +40,7 @@
     padding: 0;
 
     font-family: var(--default-font);
-    font-size: 30px;
+    font-size: 28px;
     color: var(--text-color);
 }
 
@@ -47,42 +54,111 @@ h3,
 h4,
 h5,
 h6{
-    margin-left: 1em;
+    margin-left: 1rem;
     color: var(--text-color);
 }
 
 p{
-    margin-left: 1em;
+    margin-left: 1rem;
     color: var(--text-color-lighter)
 }
 
-blockquote p{
-    color: var(--text-color-lightest)
+ul, ol{
+    margin-left: 1rem;
 }
 
+blockquote {
+    max-width: 80%;
+    margin-left: 1rem;
+    padding: .5em;
+    border-radius: var(--border-radius);
+}
+
+blockquote *{
+    margin: 0;
+    color: var(--text-color-lightest);
+}
+
+/* Definition yank */
+blockquote h4, blockquote h4+p{
+    border-radius: var(--border-radius);
+    color: var(--text-color-negative);
+}
+
+blockquote:has(> h4){
+    padding: 0;
+    border: none;
+}
+
+blockquote h4{
+    width: 100%;
+    height: 1.25em;
+    padding: .5em;
+    margin: 0;
+    
+    line-height: 1.25em;
+    background-color: var(--highlight-color-one);
+    
+    opacity: 0.9;
+}
+
+blockquote h4+p{
+    width: 100%;
+    min-height: 2em;
+    margin: -2.25em 0 0 0;
+    padding: 2.75em .5em 0 .5em;
+    line-height: 1em;
+    background-color: var(--highlight-color-one-background);
+    border-radius: var(--border-radius);
+}
+
+blockquote:nth-of-type(2) h4{
+    background-color: var(--highlight-color-two);
+}
+
+blockquote:nth-of-type(2) h4+p{
+    background-color: var(--highlight-color-two-background);
+}
+
+blockquote:nth-of-type(3) h4{
+    background-color: var(--highlight-color-three);
+}
+
+blockquote:nth-of-type(3) h4+p{
+    background-color: var(--highlight-color-three-background);
+}
+
+
+
 /* Code block, math, table */
-pre, .katex, table{
+pre, .katex, table, code{
     color: var(--text-color-lighter);
 }
 
+pre, code{
+    border-radius: var(--border-radius);
+    background-color: var(--text-color-negative);
+    font-family: var(--monospace-font);
+}
+
 pre {
-    margin: 0 auto;
+    margin-left: 1rem;
     padding: 1em;
     width: 80%;
     min-height: 10%;
     max-height: 40%; overflow: hidden; /* To avoid it squeezing out the slide */
 
-    border-radius: var(--border-radius);
-    background-color: var(--text-color-negative);
-    font-family: var(--monospace-font);
     font-size: 0.75em;
-    
     opacity: 0.9;
 }
 
 .katex {
     font-family: var(--math-font);
     font-size: 0.9em;
+}
+
+.katex p{
+    margin-left: initial;
 }
 
 /* Tables */
@@ -123,9 +199,12 @@ table tr:last-of-type{
 img {
     display: block;
     max-width: 50%;
+    max-height: 90%;
     margin: .5em 1em .5em 0;
 
     border-radius: var(--border-radius);
+
+    background-color: transparent !important;
 }
 
 img[alt~="left"]{
@@ -155,14 +234,15 @@ section h1:first-of-type{
     margin-left: 0;
     padding: .5em;
 
-    width: 100%;
-    min-height: 2rem;
+    width: calc(100% - 1em);
+    min-height: 1.5rem;
 
-    line-height: 2rem;
+    line-height: 1.5rem;
 
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
     background-color: var(--darker-primary);
     color: var(--text-color-negative);
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 /* The index */
@@ -190,14 +270,15 @@ footer{
     width: 100%;
     height: 5%;
 
-    background-color: var(--darker-primary);
+    
 }
 
 footer * {
-    width: 100%;
+    width: calc(100% + var(--border-radius));
     height: 100%;
 
-    padding: 0 0.5em 0;
+    padding: 0 calc(0.5em + var(--border-radius)) 0;
+    margin-left: calc(-1*var(--border-radius));
     line-height: 200%;
 
     font-weight: initial; /* Removes boldness */
@@ -207,11 +288,16 @@ footer * {
 /* The leftmost field */
 footer strong:nth-of-type(1){
     background-color: var(--darkest-primary);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    z-index: 2;
 }
 
 /* The middle field */
 footer strong:nth-of-type(2){
     text-align: center;
+    background-color: var(--darker-primary);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    z-index: 1;
 }
 
 /* The right field */
@@ -255,10 +341,76 @@ section.title h1:first-of-type{
 }
 
 section.title h3 ~ p{
-    margin: -0.5em auto;
+    margin: -0.25em auto;
+}
+
+section.title p:has(>img){
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 100%;
+    height: 400px;
+}
+
+section.title img[alt~="logo"]{
+    position: absolute;
+    margin: 0;
+    right:  -5%;
+    bottom: 0;
+
+    width: 400px;
+    object-fit: contain;
+
+    transform: rotate(-45deg);
+    opacity: 0.5;
 }
 
 section.title blockquote{
     margin: 1rem auto;
+    padding: 0;
     border: none; /* Removes the blockquote border */
+}
+
+section.title blockquote *{
+    margin: initial;
+}
+
+/* Definition yank */
+section.title blockquote h4, section.title blockquote h4+p{
+    color: initial;
+}
+
+section.title blockquote h4{
+    width: auto;
+    height: auto;
+    padding: 0;
+
+    line-height: initial;
+    background-color: none;
+}
+
+section.title blockquote h4+p{
+    width: initial;
+    min-height: initial;
+    margin: initial;
+    padding: initial;
+    line-height: initial;
+    background-color: none;
+}
+
+section.title blockquote:nth-of-type(2) h4{
+    background-color: none;
+}
+
+section.title blockquote:nth-of-type(2) h4+p{
+    background-color: none;
+}
+
+section.title blockquote:nth-of-type(3) h4{
+    background-color: none;
+}
+
+section.title blockquote:nth-of-type(3) h4+p{
+    background-color: none;
 }
