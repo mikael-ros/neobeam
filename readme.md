@@ -1,4 +1,4 @@
-# N_EObeam
+# N<sub>E</sub>Obeam
 ## A modern take on LaTeX beamer
 ### A Marp theme
 
