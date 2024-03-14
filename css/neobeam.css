@@ -8,6 +8,7 @@
 :root{
     /* -- Variables -- */
     /* Colors enerated with mycolor.space */
+    --lighter-primary: #6fa7f3;
     --primary: #4d85d1;
     --darker-primary: #266ab2; /* Shades 1 */
     --darkest-primary: #004f95; /* Shades 2 */
@@ -28,7 +29,7 @@
     --highlight-color-three: #009d99;
     --highlight-color-three-background: #009d99aa;
 
-    --border-radius: 0.75rem;
+    --border-radius: 0.8rem;
 
     --default-font: "Roboto";
     --monospace-font: "Roboto Mono";
@@ -112,19 +113,19 @@ blockquote h4+p{
     padding: 0.5em;
 }
 
-blockquote:nth-of-type(2) h4{
+blockquote:has(> h4):nth-of-type(2) h4{
     background-color: var(--highlight-color-two);
 }
 
-blockquote:nth-of-type(2) h4+p{
+blockquote:has(> h4):nth-of-type(2){
     background-color: var(--highlight-color-two-background);
 }
 
-blockquote:nth-of-type(3) h4{
+blockquote:has(> h4):nth-of-type(3) h4{
     background-color: var(--highlight-color-three);
 }
 
-blockquote:nth-of-type(3) h4+p{
+blockquote:has(> h4):nth-of-type(3){
     background-color: var(--highlight-color-three-background);
 }
 
@@ -167,13 +168,21 @@ table {
     margin-left: 1rem;
 
     border-radius: var(--border-radius);
+    border-style: solid;
+    border-width: .1em;
+    border-color: var(--text-color-negative-darker);
     
     opacity: 0.9;
 }
 
+table th td{
+    border: none;
+}
+
 th{
-    background-color: var(--text-color-negative);
+    background-color: var(--lighter-primary);
     border-bottom-width: 2px;
+    border-top-width: 0;
 }
 
 table th:first-of-type{
@@ -228,7 +237,7 @@ section {
     background-color: var(--text-color-negative-lighter);
 }
 
-section>h1:first-of-type{
+section > h1:first-of-type{
     position: absolute;
     top: 0;
 

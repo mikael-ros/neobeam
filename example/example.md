@@ -51,19 +51,20 @@ We can define ``variables`` inline, and code in blocks (with syntax highlighting
 ---
 # Mathematics corner
 ## Formulas
-$$
+> The length of a vector can be computed by the following formula
+> $$
 ||\overline v|| = \sqrt{a^2 + b^2} \\
 \text{where } \overline v = (a,b)
 $$
 ## Definitions
-Blockquotes with headings inside get translated to definitions like:
+Blockquotes with level 4 (####) headings inside get translated to definitions like:
 
 > #### Vector
 > A collection of numbers
 
 ---
 # Data
-We can also represent data in tables using this theme!
+Tables are also decorated in this theme!
 | Left Row    | Center Row  | Right row     |
 | :---        |    :----:   |          ---: |
 | Some        |  Cool       | Data          |
