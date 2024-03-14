@@ -1,8 +1,8 @@
 # N<sub>E</sub>Obeam
-## A modern take on LaTeX beamer
+## A modern take on LaTeX beamer 
 ### A Marp theme
 
-Find the classic beamer outdated? Are your students losing focus due to it?
+Find the classic beamer outdated? Are your students losing focus due to it? 💤
 
 I'm not sure how to solve the last one, but this theme is my attempt to address the first issue: too many a new presentation look decades old due to the classic look of beamer.
 
@@ -24,14 +24,14 @@ Neobeam vs beamer
 
 ## Usage
 > ! Until a future timepoint, I won't provide a guide on how to use it with Marp CLI, as I expect CLI users to be technical enough to know how to do this.
-### Prerequisites
+### 🛠 Prerequisites
 - Git or zip
 - Visual Studio Code
 - Marp Extension for Visual Studio Code
 
 This font by default uses the fonts Roboto, Roboto Mono (for code) and Noto Sans Math (for math). These are imported in the CSS file, but you can aquire them yourself too, or change them out.
 
-#### In an existing presentation
+#### 📥 In an existing presentation
 1. Download or copy the neobeam.css file into your project OR use the direct link.
 2. Add it to your VSCode settings by editing your ``.vscode/settings.json`` file and appending:
 ```json
@@ -58,7 +58,7 @@ footer: '**Author**
          **Conference/course/e.t.c.**'
 ```
 
-#### As a template
+#### ✨️ As a template
 Simply clone or fork this repo or download the release. If you wish, you can delete the previews folder.
 
 ---
@@ -87,6 +87,8 @@ Heres an example of a title slide. As long as you follow as similar format it sh
 Instead of defininig a static header, one gets created by the first H1 (single #) in the slide. 
 ### Footers
 Every page has a footer. It's made from the footer content defined in the beginning of the presentation markdown, and the sections are split by using ** (to create children objects). The footer is a flex-box and I've made it split itself into three sections. You could likely with some modifications change this fairly easily.
+### Math
+I've opted to use KaTeX, and have not styled for other options yet.
 ### Definitions
 To make LaTeX style bubble definitions I've had to do a slight work around to avoid using HTML in Marp. To define a definition, write the following:
 ```markdown
