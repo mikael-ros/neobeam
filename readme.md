@@ -44,7 +44,8 @@ Images            |  Tables
 :-------------------------:|:-------------------------:
 ![Images](previews/images.png)  |  ![Tables](previews/table.png)
 #### HTML styling
-> This is optionally enabled!
+> [!NOTE]
+> This is optionally enabled! See features & quirks.
 
 ![HTML styling](previews/html.png)
 
