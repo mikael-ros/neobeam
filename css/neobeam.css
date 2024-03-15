@@ -228,6 +228,31 @@ img[alt~="right"]{
     float:right;
 }
 
+/* HTML vodoo */
+mark {
+    background-color: var(--highlight-color-two-background);
+}
+
+abbr {
+    color: var(--text-color-lightest);
+}
+
+var, samp {
+    color: var(--highlight-color-two);
+}
+
+samp {
+    font-family: var(--monospace-font);
+}
+
+q {
+    font-weight: 300;
+}
+
+audio {
+    opacity: 0.75;
+}
+
 /* ............ */
 /* | Sections | */
 /* ```````````` */
@@ -260,9 +285,13 @@ section::after{
     position: absolute;
     bottom: 0;
     right: 0;
+    padding: 0 0 .1em 0;
+    margin: 0;
 
-    height: 5%;
-    width: 2%;
+    font-size: 1.5rem;
+
+    height: 1em;
+    width: 1em;
 }
 
 /* .......... */
@@ -277,9 +306,7 @@ footer{
     display: flex;
     
     width: 100%;
-    height: 5%;
-
-    
+    height: 1.5rem;
 }
 
 footer * {
@@ -288,7 +315,7 @@ footer * {
 
     padding: 0 calc(0.5em + var(--border-radius)) 0;
     margin-left: calc(-1*var(--border-radius));
-    line-height: 200%;
+    line-height: 1.5rem;
 
     font-weight: initial; /* Removes boldness */
     color: var(--text-color-negative);
@@ -311,7 +338,7 @@ footer strong:nth-of-type(2){
 
 /* The right field */
 footer strong:nth-of-type(3){
-    padding-right: calc(2% + 0.5em);
+    padding-right: calc(1.5rem + 0.5em);
     text-align: right;
     background-color: var(--primary);
 }

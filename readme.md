@@ -18,8 +18,6 @@ Neobeam vs beamer
 ### Slide with code
 ### Slide with statements
 
-> For security reasons, and becuase I couldn't get it to work, I have not implemented any HTML styling, so ==marking== is not supported, for example.
-
 ---
 
 ## ⌨️ Usage
