@@ -20,17 +20,20 @@ All fonts used in the theme by default are imported from Google Fonts. Consider 
 
 ---
 ## 📺 Previews
+### [Live preview](https://mikael-ros.github.io/neobeam/neobeam)
+
+### Static previews
 N<sub>E</sub>Obeam            |  beamer
 :-------------------------:|:-------------------------:
 ![Math](previews/title-slide.png)  |  ![Code](https://www.latextemplates.com/actions/action_fetch_template_image?image=1&template=beamer-presentation)
 
 Image on the right courtesy of [latextemplates.com](https://www.latextemplates.com). Will eventually be replaced by my own.
 
-### Main title
+#### Main title
 ![Main title preview](previews/title-slide.png)
-### A slide with text
+#### A slide with text
 ![Text title preview](previews/text.png)
-### Science slides
+#### Science slides
 Math            |  Code
 :-------------------------:|:-------------------------:
 ![Math](previews/math.png)  |  ![Code](previews/code.png)
@@ -38,7 +41,7 @@ Math            |  Code
 Images            |  Tables
 :-------------------------:|:-------------------------:
 ![Images](previews/images.png)  |  ![Tables](previews/table.png)
-### HTML styling
+#### HTML styling
 > This is optionally enabled!
 
 ![HTML styling](previews/html.png)
