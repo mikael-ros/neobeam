@@ -16,6 +16,8 @@ This theme on purpose uses no copyright-protected works, and should be able to b
 
 Consider the [license](LICENSE) of this project as well.
 
+All fonts used in the theme by default are imported from Google Fonts. Consider the privacy aspects of this yourself and choose wheter you want local installs of them or not. This was a choice made to enable direct linking of the theme to work.
+
 ---
 ## 📺 Previews
 N<sub>E</sub>Obeam            |  beamer
