@@ -6,17 +6,21 @@ Find the classic beamer outdated? Are your students losing focus due to it? 💤
 
 I'm not sure how to solve the last one, but this theme is my attempt to address the first issue: too many a new presentation look decades old due to the classic look of beamer.
 
-_[Marp]() is a presentation framework that allows users to create presentations with Markdown and CSS. While this theme relies on Marp to be used, it is not directly affiliated with or sponsored by it._
+> [!NOTE]
+> _[Marp]() is a presentation framework that allows users to create presentations with Markdown and CSS. While this theme relies on Marp to be used, it is not directly affiliated with or sponsored by it._
 
-Inspired by, but not affiliated with or sourced from, the Marp [beam theme made by rnd195](https://github.com/rnd195/my-marp-themes). As mentioned, I have not used any of their code to create this theme.
+> [!NOTE]
+> Inspired by, but not affiliated with or sourced from, the Marp [beam theme made by rnd195](https://github.com/rnd195/my-marp-themes). As mentioned, I have not used any of their code to create this theme.
 
 #### Disclaimer
 
-This theme on purpose uses no copyright-protected works, and should be able to be used for any purpose, but do conduct your own research before doing such. Anything personal-use should be okay.
+> [!IMPORTANT]
+> This theme on purpose uses no copyright-protected works, and should be able to be used for any purpose, but do conduct your own research before doing such. Anything personal-use should be okay.
+>
+> Consider the [license](LICENSE) of this project as well.
 
-Consider the [license](LICENSE) of this project as well.
-
-All fonts used in the theme by default are imported from Google Fonts. Consider the privacy aspects of this yourself and choose wheter you want local installs of them or not. This was a choice made to enable direct linking of the theme to work.
+> [!IMPORTANT]
+> All fonts used in the theme by default are imported from Google Fonts. Consider the privacy aspects of this yourself and choose wheter you want local installs of them or not. This was a choice made to enable direct linking of the theme to work.
 
 ---
 ## 📺 Previews
@@ -135,7 +139,8 @@ There is light HTML support, including the elements:
 
 To enable HTML support add or modify the line ``"markdown.marp.enableHtml": true`` in ``.vscode/settings.json``. 
 
-Considering the [security issues mentioned in Marps documentation](https://github.com/marp-team/marp-vscode#enable-html-in-marp-markdown-%EF%B8%8F), this is disabled by default, even in the template. You may need to restart Visual Studio Code after changing the setting. You will need to export in HTML for interactive elements to function.
+> [!WARNING] 
+> Considering the [security issues mentioned in Marps documentation](https://github.com/marp-team/marp-vscode#enable-html-in-marp-markdown-%EF%B8%8F), this is disabled by default, even in the template. You may need to restart Visual Studio Code after changing the setting. You will need to export in HTML for interactive elements to function.
 
 ---
 
