@@ -24,7 +24,7 @@ N<sub>E</sub>Obeam            |  beamer
 :-------------------------:|:-------------------------:
 ![Math](previews/title-slide.png)  |  ![Code](https://www.latextemplates.com/actions/action_fetch_template_image?image=1&template=beamer-presentation)
 
-Image on the right courtesy of [latextemplates.com](www.latextemplates.com). Will eventually be replaced by my own.
+Image on the right courtesy of [latextemplates.com](https://www.latextemplates.com). Will eventually be replaced by my own.
 
 ### Main title
 ![Main title preview](previews/title-slide.png)
