@@ -20,7 +20,7 @@ All fonts used in the theme by default are imported from Google Fonts. Consider 
 
 ---
 ## 📺 Previews
-### [Live preview](https://mikael-ros.github.io/neobeam/neobeam)
+### 🔴[Live preview](https://mikael-ros.github.io/neobeam/neobeam)🔴
 
 ### Static previews
 N<sub>E</sub>Obeam            |  beamer
