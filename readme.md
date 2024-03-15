@@ -8,8 +8,7 @@ I'm not sure how to solve the last one, but this theme is my attempt to address 
 
 > [!NOTE]
 > _[Marp]() is a presentation framework that allows users to create presentations with Markdown and CSS. While this theme relies on Marp to be used, it is not directly affiliated with or sponsored by it._
-
-> [!NOTE]
+>
 > Inspired by, but not affiliated with or sourced from, the Marp [beam theme made by rnd195](https://github.com/rnd195/my-marp-themes). As mentioned, I have not used any of their code to create this theme.
 
 #### Disclaimer
@@ -18,8 +17,7 @@ I'm not sure how to solve the last one, but this theme is my attempt to address 
 > This theme on purpose uses no copyright-protected works, and should be able to be used for any purpose, but do conduct your own research before doing such. Anything personal-use should be okay.
 >
 > Consider the [license](LICENSE) of this project as well.
-
-> [!IMPORTANT]
+>
 > All fonts used in the theme by default are imported from Google Fonts. Consider the privacy aspects of this yourself and choose wheter you want local installs of them or not. This was a choice made to enable direct linking of the theme to work.
 
 ---
@@ -53,13 +51,15 @@ Images            |  Tables
 ---
 
 ## ⌨️ Usage
-> ! Until a future timepoint, I won't provide a guide on how to use it with Marp CLI, as I expect CLI users to be technical enough to know how to do this.
+> ![NOTE]
+> Until a future timepoint, I won't provide a guide on how to use it with Marp CLI, as I expect CLI users to be technical enough to know how to do this.
 ### 🛠 Prerequisites
 - Git or zip
 - Visual Studio Code
 - Marp Extension for Visual Studio Code
 
-This font by default uses the fonts Roboto, Roboto Mono (for code) and Noto Sans Math (for math). These are imported in the CSS file, but you can aquire them yourself too, or change them out.
+> [!TIP]
+> This font by default uses the fonts Roboto, Roboto Mono (for code) and Noto Sans Math (for math). These are imported in the CSS file, but you can aquire them yourself too, or change them out.
 
 #### 📥 In an existing presentation
 1. Download or copy the neobeam.css file into your project OR use the direct link.
