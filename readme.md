@@ -51,7 +51,7 @@ Images            |  Tables
 ---
 
 ## ⌨️ Usage
-> ![NOTE]
+> [!NOTE]
 > Until a future timepoint, I won't provide a guide on how to use it with Marp CLI, as I expect CLI users to be technical enough to know how to do this.
 ### 🛠 Prerequisites
 - Git or zip
