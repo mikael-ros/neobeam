@@ -1,4 +1,4 @@
-<p align="center" style="background-color: transparent">
+<p align="center" style="background-color: transparent; width: 60%">
     <img src="assets/neobeam.svg">
 </p>
 
