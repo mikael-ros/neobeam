@@ -4,7 +4,7 @@
         "css/neobeam-beamer.css",
         "css/neobeam-dsek.css"
     ],
-    "markdown.marp.enableHtml": true,
+    "markdown.marp.enableHtml": false,
     "markdown.marp.exportType": "html",
     "markdown.marp.mathTypesetting": "katex"
 }
