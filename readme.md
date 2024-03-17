@@ -25,7 +25,8 @@ I'm not sure how to solve the last one, but this theme is my attempt to address 
 
 ---
 ## 📺 Previews
-### 🔴[Live preview](https://mikael-ros.github.io/neobeam/neobeam)🔴
+### 🔴 [Live preview](https://mikael-ros.github.io/neobeam/neobeam) 🔴
+> Live previews for the other color schemes further down!
 
 ### Static previews
 N<sub>E</sub>Obeam            |  beamer
