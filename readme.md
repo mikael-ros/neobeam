@@ -1,4 +1,6 @@
-# N<sub>E</sub>Obeam
+<p align="center" style="background-color: transparent">
+    <img src="assets/neobeam.png">
+</p>
 ## ✨️A modern take on LaTeX beamer 
 ### A Marp theme
 
