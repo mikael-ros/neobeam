@@ -180,8 +180,33 @@ table th td{
 
 th{
     background-color: var(--lighter-primary);
+    border: 0;
     border-bottom-width: 2px;
     border-top-width: 0;
+}
+
+thead {
+    border: var(--border-radius) var(--border-radius) 0 0;
+}
+
+thead > tr {
+    border-top-width: 0;
+}
+
+td:first-child, th:first-child{
+    border-left-width: 0;
+}
+
+td:last-child, th:last-child{
+    border-right-width: 0;
+}
+
+table th{
+    border-top-width: 0;
+}
+
+tbody > tr:last-child td{
+    border-bottom-width: 0;
 }
 
 table th:first-of-type{
@@ -192,15 +217,15 @@ table th:last-of-type{
     border-top-right-radius: var(--border-radius);
 }
 
-table tr:nth-of-type(2n-1){
+table > tr:nth-of-type(2n-1){
     background-color: var(--text-color-negative-lightest);
 }
 
-table tr:nth-of-type(2n){
+table > tr:nth-of-type(2n){
     background-color: var(--text-color-negative-lighter);
 }
 
-table tr:last-of-type{
+table > tr:last-of-type{
     border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
@@ -230,7 +255,9 @@ img[alt~="right"]{
 
 /* HTML vodoo */
 mark {
+    padding: 0 .5em 0 .5em;
     background-color: var(--highlight-color-two-background);
+    border-radius: var(--border-radius);
 }
 
 abbr {
@@ -261,9 +288,10 @@ section {
     background-color: var(--text-color-negative-lighter);
 }
 
-section > h1:first-of-type{
+section header{
     position: absolute;
     top: 0;
+    left: 0;
 
     margin-left: 0;
     padding: .5em;
@@ -272,6 +300,8 @@ section > h1:first-of-type{
     min-height: 1.5rem;
 
     line-height: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
 
     border-radius: 0 0 var(--border-radius) var(--border-radius);
     background-color: var(--darker-primary);
@@ -367,6 +397,7 @@ section.title p{
 
 section.title h1:first-of-type{
     margin: 0 auto;
+    padding: .5em;
 
     width: 80%;
     min-height: 2.5rem;
@@ -374,6 +405,9 @@ section.title h1:first-of-type{
     line-height: 2.5rem;
 
     border-radius: var(--border-radius);
+
+    background-color: var(--darker-primary);
+    color: var(--text-color-negative);
 }
 
 section.title h3 ~ p{

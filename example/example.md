@@ -20,7 +20,7 @@ footer: '**mikael-ros**
 ![logo GitHub Logo](../assets/github-mark.svg)
 
 ---
-# Table of contents
+<!-- header: 'Table of contents' -->
 1. Normal text
 2. Code blocks
 3. Mathematics
@@ -28,7 +28,7 @@ footer: '**mikael-ros**
 5. Images
 6. HTML stuff
 ---
-# Normal text
+<!-- header: 'Normal text' -->
 **This** is what a regular slide can look like in Neobeam.
 - A cool fact
 - Interesting tidbit
@@ -42,7 +42,7 @@ A quote from my favorite author
 > "Hello" - Author Cool 2024
 
 ---
-# Code blocks
+<!-- header: 'Code blocks' -->
 We can define ``variables`` inline, and code in blocks (with syntax highlighting!!!):
 ```java
     if (marp) {
@@ -50,7 +50,7 @@ We can define ``variables`` inline, and code in blocks (with syntax highlighting
     }
 ```
 ---
-# Mathematics corner
+<!-- header: 'Mathematics corner' -->
 ## Formulas
 > The length of a vector can be computed by the following formula
 > $$
@@ -64,23 +64,24 @@ Blockquotes with level 4 (####) headings inside get translated to definitions li
 > A collection of numbers
 
 ---
-# Data
+<!-- header: 'Data' -->
 Tables are also decorated in this theme!
 | Left Row    | Center Row  | Right row     |
 | :---        |    :----:   |          ---: |
 | Some        |  Cool       | Data          |
 | Some        |  Cool       | Data          |
 | Some        |  Cool       | Data          |
+| Some        |  Cool       | Data          |
 ---
-# Images
+<!-- header: 'Images' -->
 
 ![Photo by Joshua J. Cotten on Unsplash](https://images.unsplash.com/photo-1601247387326-f8bcb5a234d4?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) 
 
 Images can be left-aligned, centered, and right-aligned!
 
 ---
+<!-- header: 'HTML wonderland' -->
 <!-- This slide only works with HTML enabled -->
-<h1>HTML wonderland</h1>
 
 <h2>These are all the HTML elements I've styled!</h2>
 
