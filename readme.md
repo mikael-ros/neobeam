@@ -49,6 +49,15 @@ Images            |  Tables
 
 ![HTML styling](previews/html.png)
 
+### 🖌️ Theme versions
+> Click on the theme to see a live preview
+
+Theme | Based on
+:----:|:--------:
+[neobeam](https://mikael-ros.github.io/neobeam/neobeam)|
+[neobeam-beamer](https://mikael-ros.github.io/neobeam/neobeam-beamer) | beamer color scheme
+[neobeam-dsek](https://mikael-ros.github.io/neobeam/neobeam-dsek) | [LTH D-sektionen design profile](https://www.dsek.se/en/documents/governing)
+
 ---
 
 ## ⌨️ Usage
@@ -76,7 +85,7 @@ Images            |  Tables
   }
   //...
 ```
-where ``path/to/neobeam.css`` is either local, for example ``css/neobeam.css`` or the direct link to the repo's CSS file: ``https://raw.githubusercontent.com/mikael-ros/neobeam/main/css/neobeam.css``. Keep in mind that using the direct link might cause your presentation to change over time and it's best you have a local copy instead.
+where ``path/to/neobeam.css`` is either local, for example ``css/neobeam.css`` or the direct link to the repo's CSS file, ex: ``https://raw.githubusercontent.com/mikael-ros/neobeam/main/css/neobeam.css``. Keep in mind that using the direct link might cause your presentation to change over time and it's best you have a local copy instead.
 
 3. Add it to your Marp presentation by adding:
 ```markdown
