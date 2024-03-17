@@ -1,0 +1,482 @@
+/* @theme neobeam-csek */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Math&display=swap');
+@import "default";
+
+:root{
+    /* -- Variables -- */
+     /* Colors enerated with mycolor.space */
+     --lighter-primary: #7744AA;
+     --primary: #9966CC;
+     --darker-primary: #7c4caf; /* Shades 1 */
+     --darkest-primary: #603292; /* Shades 2 */
+ 
+     --text-color: #030104;
+     --text-color-lighter: #301040;
+     --text-color-lightest: #402060;
+ 
+     --text-color-negative-lightest: #edf;
+     --text-color-negative-lighter: #dce;
+     --text-color-negative: #cbd;
+     --text-color-negative-darker: #bac;
+ 
+     --highlight-color-one: var(--primary);
+     --highlight-color-one-background: #9966CCaa;
+     --highlight-color-two: #b76c00;
+     --highlight-color-two-background: #b76c00aa;
+     --highlight-color-three: #009a97;
+     --highlight-color-three-background: #009a97aa;
+    --border-radius: 0.8rem;
+
+    --default-font: "Helvetica";
+    --monospace-font: "Roboto Mono";
+    --math-font: "Noto Sans Math";
+
+    /* -- Presentation wide default */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: var(--default-font);
+    font-size: 28px;
+    color: var(--text-color);
+}
+
+/* ..................... */
+/* | Specific elements | */
+/* ````````````````````` */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    margin-left: 1rem;
+    color: var(--text-color);
+}
+
+p{
+    margin-left: 1rem;
+    color: var(--text-color-lighter)
+}
+
+ul, ol{
+    margin-left: 1rem;
+}
+
+blockquote {
+    min-width: 10%;
+    max-width: 60%;
+    margin-left: 1rem;
+    padding: .5em;
+    border-radius: var(--border-radius);
+    border-color: var(--text-color-negative-darker);
+    background-color: var(--text-color-negative);
+}
+
+blockquote *{
+    margin: 0;
+    color: var(--text-color-lightest);
+}
+
+/* Definition yank */
+blockquote h4, blockquote h4+p{
+    border-radius: var(--border-radius);
+    color: var(--text-color-negative);
+}
+
+blockquote:has(> h4){
+    padding: 0;
+    border: none;
+    background-color: var(--highlight-color-one-background);
+}
+
+blockquote h4{
+    width: calc(100% - 1em);
+    height: 1.25em;
+    padding: .5em;
+    margin: 0;
+    
+    line-height: 1.25em;
+    background-color: var(--highlight-color-one);
+    
+    opacity: 0.8;
+}
+
+blockquote h4+p{
+    width: 100%;
+    margin: 0;
+    padding: 0.5em;
+}
+
+blockquote:has(> h4):nth-of-type(2) h4{
+    background-color: var(--highlight-color-two);
+}
+
+blockquote:has(> h4):nth-of-type(2){
+    background-color: var(--highlight-color-two-background);
+}
+
+blockquote:has(> h4):nth-of-type(3) h4{
+    background-color: var(--highlight-color-three);
+}
+
+blockquote:has(> h4):nth-of-type(3){
+    background-color: var(--highlight-color-three-background);
+}
+
+
+
+/* Code block, math, table */
+pre, .katex, table, code{
+    color: var(--text-color-lighter);
+}
+
+pre, code{
+    border-radius: var(--border-radius);
+    background-color: var(--text-color-negative);
+    font-family: var(--monospace-font);
+}
+
+pre {
+    margin-left: 1rem;
+    padding: 1em;
+    min-width: 20%;
+    max-width: 70%;
+    min-height: 10%;
+    max-height: 40%; overflow: hidden; /* To avoid it squeezing out the slide */
+
+    font-size: 0.75em;
+    opacity: 0.9;
+}
+
+.katex {
+    font-family: var(--math-font);
+    font-size: 0.9em;
+}
+
+.katex p{
+    margin-left: initial;
+}
+
+/* Tables */
+table {
+    margin-left: 1rem;
+
+    border-radius: var(--border-radius);
+    border-style: solid;
+    border-width: .1em;
+    border-color: var(--text-color-negative-darker);
+    
+    opacity: 0.9;
+}
+
+table th td{
+    border: none;
+}
+
+th{
+    background-color: var(--lighter-primary);
+    border: 0;
+    border-bottom-width: 2px;
+    border-top-width: 0;
+}
+
+thead {
+    border: var(--border-radius) var(--border-radius) 0 0;
+}
+
+thead > tr {
+    border-top-width: 0;
+}
+
+td:first-child, th:first-child{
+    border-left-width: 0;
+}
+
+td:last-child, th:last-child{
+    border-right-width: 0;
+}
+
+table th{
+    border-top-width: 0;
+}
+
+tbody > tr:last-child td{
+    border-bottom-width: 0;
+}
+
+table th:first-of-type{
+    border-top-left-radius: var(--border-radius);
+}
+
+table th:last-of-type{
+    border-top-right-radius: var(--border-radius);
+}
+
+table > tr:nth-of-type(2n-1){
+    background-color: var(--text-color-negative-lightest);
+}
+
+table > tr:nth-of-type(2n){
+    background-color: var(--text-color-negative-lighter);
+}
+
+table > tr:last-of-type{
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+/* Images */
+img {
+    display: block;
+    max-width: 50%;
+    max-height: 90%;
+    margin: .5em 1em .5em 0;
+
+    border-radius: var(--border-radius);
+
+    background-color: transparent !important;
+}
+
+img[alt~="left"]{
+    float:left;
+}
+
+img[alt~="center"]{
+    margin: 0 auto;
+}
+
+img[alt~="right"]{
+    float:right;
+}
+
+/* HTML vodoo */
+mark {
+    padding: 0 .5em 0 .5em;
+    background-color: var(--highlight-color-two-background);
+    border-radius: var(--border-radius);
+}
+
+abbr {
+    color: var(--text-color-lightest);
+}
+
+var, samp {
+    color: var(--highlight-color-two);
+}
+
+samp {
+    font-family: var(--monospace-font);
+}
+
+q {
+    font-weight: 300;
+}
+
+audio {
+    opacity: 0.75;
+}
+
+/* ............ */
+/* | Sections | */
+/* ```````````` */
+
+section {
+    background-color: var(--text-color-negative-lighter);
+}
+
+section header{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    margin-left: 0;
+    padding: .5em;
+
+    width: calc(100% - 1em);
+    min-height: 1.5rem;
+
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    background-color: var(--darker-primary);
+    color: var(--text-color-negative);
+    opacity: 0.8;
+}
+
+/* The index */
+section::after{
+    color: var(--text-color-negative);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 0 .1em 0;
+    margin: 0;
+
+    font-size: 1.5rem;
+
+    height: 1em;
+    width: 1em;
+}
+
+/* .......... */
+/* | Footer | */
+/* `````````` */
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    display: flex;
+    
+    width: 100%;
+    height: 1.5rem;
+}
+
+footer * {
+    width: calc(100% + var(--border-radius));
+    height: 100%;
+
+    padding: 0 calc(0.5em + var(--border-radius)) 0;
+    margin-left: calc(-1*var(--border-radius));
+    line-height: 1.5rem;
+
+    font-weight: initial; /* Removes boldness */
+    color: var(--text-color-negative);
+}
+
+/* The leftmost field */
+footer strong:nth-of-type(1){
+    background-color: var(--darkest-primary);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    z-index: 2;
+}
+
+/* The middle field */
+footer strong:nth-of-type(2){
+    text-align: center;
+    background-color: var(--darker-primary);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    z-index: 1;
+}
+
+/* The right field */
+footer strong:nth-of-type(3){
+    padding-right: calc(1.5rem + 0.5em);
+    text-align: right;
+    background-color: var(--primary);
+}
+
+/* -------------------------------------------------------- */
+/* Specific classes                                         */
+/* -------------------------------------------------------- */
+
+/* ......... */
+/* | Title | */
+/* ````````` */
+
+section.title h1,
+section.title h2,
+section.title h3,
+section.title p{
+    position: relative;
+    text-align: center;
+    margin-left: 0;
+    font-weight: 500;
+}
+
+section.title p{
+    font-weight: initial;
+}
+
+section.title h1:first-of-type{
+    margin: 0 auto;
+    padding: .5em;
+
+    width: 80%;
+    min-height: 2.5rem;
+
+    line-height: 2.5rem;
+
+    border-radius: var(--border-radius);
+
+    background-color: var(--darker-primary);
+    color: var(--text-color-negative);
+}
+
+section.title h3 ~ p{
+    margin: -0.25em auto;
+}
+
+section.title p:has(>img){
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 100%;
+    height: 400px;
+}
+
+section.title img[alt~="logo"]{
+    position: absolute;
+    margin: 0;
+    right:  -5%;
+    bottom: 0;
+
+    width: 400px;
+    object-fit: contain;
+
+    transform: rotate(-45deg);
+    opacity: 0.5;
+}
+
+section.title blockquote{
+    margin: 1rem auto;
+    padding: 0;
+    border: none; /* Removes the blockquote border */
+    background-color: transparent; 
+}
+
+section.title blockquote *{
+    margin: initial;
+}
+
+/* Definition yank */
+section.title blockquote h4, section.title blockquote h4+p{
+    color: initial;
+}
+
+section.title blockquote h4{
+    width: auto;
+    height: auto;
+    padding: 0;
+
+    line-height: initial;
+    background-color: none;
+}
+
+section.title blockquote h4+p{
+    width: initial;
+}
+
+section.title blockquote:nth-of-type(2) h4{
+    background-color: none;
+}
+
+section.title blockquote:nth-of-type(2) h4+p{
+    background-color: none;
+}
+
+section.title blockquote:nth-of-type(3) h4{
+    background-color: none;
+}
+
+section.title blockquote:nth-of-type(3) h4+p{
+    background-color: none;
+}

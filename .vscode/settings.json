@@ -2,7 +2,9 @@
     "markdown.marp.themes": [
         "css/neobeam.css",
         "css/neobeam-beamer.css",
-        "css/neobeam-dsek.css"
+        "css/neobeam-dsek.css",
+        "css/neobeam-csek.css",
+        "css/neobeam-lund.css"
     ],
     "markdown.marp.enableHtml": false,
     "markdown.marp.exportType": "html",
