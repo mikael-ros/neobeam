@@ -27,7 +27,7 @@ I'm not sure how to solve the last one, but this theme is my attempt to address 
 ### Static previews
 N<sub>E</sub>Obeam            |  beamer
 :-------------------------:|:-------------------------:
-![Math](previews/title-slide.png)  |  ![Code](https://www.latextemplates.com/actions/action_fetch_template_image?image=1&template=beamer-presentation)
+![Neobeam](previews/title-slide.png)  |  ![Beamer](https://www.latextemplates.com/actions/action_fetch_template_image?image=1&template=beamer-presentation)
 
 Image on the right courtesy of [latextemplates.com](https://www.latextemplates.com). Will eventually be replaced by my own.
 
@@ -57,6 +57,11 @@ Theme | Based on
 [neobeam](https://mikael-ros.github.io/neobeam/neobeam)|
 [neobeam-beamer](https://mikael-ros.github.io/neobeam/neobeam-beamer) | beamer color scheme
 [neobeam-dsek](https://mikael-ros.github.io/neobeam/neobeam-dsek) | [LTH D-sektionen design profile](https://www.dsek.se/en/documents/governing)
+
+#### Some static previews
+ beamer theme | LTH D-sektionen
+:-------------------------:|:-------------------------:
+  ![Beamer](previews/beamer.png) | ![D-sek](previews/d-sek.png)
 
 ---
 
