@@ -30,27 +30,27 @@ I'm not sure how to solve the last one, but this theme is my attempt to address 
 ### Static previews
 N<sub>E</sub>Obeam            |  beamer
 :-------------------------:|:-------------------------:
-![Neobeam](previews/title-slide.png)  |  ![Beamer](https://www.latextemplates.com/actions/action_fetch_template_image?image=1&template=beamer-presentation)
+![Neobeam](previews/default/example-1.png)  |  ![Beamer](https://www.latextemplates.com/actions/action_fetch_template_image?image=1&template=beamer-presentation)
 
 Image on the right courtesy of [latextemplates.com](https://www.latextemplates.com). Will eventually be replaced by my own.
 
 #### Main title
-![Main title preview](previews/title-slide.png)
+![Main title preview](previews/default/example-1.png)
 #### A slide with text
-![Text title preview](previews/text.png)
+![Text title preview](previews/default/example-3.png)
 #### Science slides
 Math            |  Code
 :-------------------------:|:-------------------------:
-![Math](previews/math.png)  |  ![Code](previews/code.png)
+![Math](previews/default/example-5.png)  |  ![Code](previews/default/example-4.png)
 ### Special elements
 Images            |  Tables
 :-------------------------:|:-------------------------:
-![Images](previews/images.png)  |  ![Tables](previews/table.png)
+![Images](previews/default/example-7.png)  |  ![Tables](previews/default/example-6.png)
 #### HTML styling
 > [!NOTE]
 > This is optionally enabled! See features & quirks.
 
-![HTML styling](previews/html.png)
+![HTML styling](previews/default/example-8.png)
 
 ### 🖌️ Theme versions
 > Click on the theme to see a live preview
@@ -60,11 +60,15 @@ Theme | Based on
 [neobeam](https://mikael-ros.github.io/neobeam/neobeam)|
 [neobeam-beamer](https://mikael-ros.github.io/neobeam/neobeam-beamer) | beamer color scheme
 [neobeam-dsek](https://mikael-ros.github.io/neobeam/neobeam-dsek) | [LTH D-sektionen design profile](https://www.dsek.se/en/documents/governing)
+[neobeam-csek](https://mikael-ros.github.io/neobeam/neobeam-csek) | [LTH C-sektionen design profile](https://www.dsek.se/en/documents/governing)
+[neobeam-lund](https://mikael-ros.github.io/neobeam/neobeam-lund) | [Lund University design profile](https://www.medarbetarwebben.lu.se/stod-och-verktyg/kommunikation-och-grafisk-profil/grafisk-profil-och-logotyp)
 
 #### Some static previews
- beamer theme | LTH D-sektionen
-:-------------------------:|:-------------------------:
-  ![Beamer](previews/beamer.png) | ![D-sek](previews/d-sek.png)
+> More are available in the repo!
+
+ Default | beamer theme | LTH D-sektionen | LTH C-sektionen | LTH/Lund University 
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+ ![Neobeam](previews/default/example-1.png) | ![Beamer](previews/beamer/beamer-1.png) | ![D-sek](previews/dsek/dsek-1.png) | ![D-sek](previews/csek/csek-1.png) | ![Lund](previews/lund/lund-1.png)
 
 ---
 
