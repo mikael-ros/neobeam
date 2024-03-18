@@ -18,7 +18,7 @@ I'm not sure how to solve the last one, but this theme is my attempt to address 
 
 > [!IMPORTANT]
 > **None of the following is legal advice. Consult a professional**
-> This theme on purpose uses no copyright-protected works, and should be able to be used for any purpose, but do conduct your own research before doing such. 
+> This theme uses free-to-use fonts, and should be okay for personal use, but do conduct your own research before hosting any large presentation with it.
 >
 > Consider the [license](LICENSE) of this project as well, and Marp itself.
 >
