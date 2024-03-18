@@ -17,11 +17,13 @@ I'm not sure how to solve the last one, but this theme is my attempt to address 
 #### Disclaimer
 
 > [!IMPORTANT]
-> This theme on purpose uses no copyright-protected works, and should be able to be used for any purpose, but do conduct your own research before doing such. Anything personal-use should be okay.
+> **None of the following is legal advice. Consult a professional**
+> This theme on purpose uses no copyright-protected works, and should be able to be used for any purpose, but do conduct your own research before doing such. 
 >
-> Consider the [license](LICENSE) of this project as well.
+> Consider the [license](LICENSE) of this project as well, and Marp itself.
 >
 > All fonts used in the theme by default are imported from Google Fonts. Consider the privacy aspects of this yourself and choose wheter you want local installs of them or not. This was a choice made to enable direct linking of the theme to work.
+ä
 
 ---
 ## 📺 Previews
@@ -82,7 +84,7 @@ Theme | Based on
 - Marp Extension for Visual Studio Code
 
 > [!TIP]
-> This font by default uses the fonts Roboto, Roboto Mono (for code) and Noto Sans Math (for math). These are imported in the CSS file, but you can aquire them yourself too, or change them out.
+> This font by default uses the fonts Roboto, Roboto Mono (for code) and Noto Sans Math (for math). These are imported in the CSS file, but you can aquire them yourself too, or change them out. In the LTH C-sektionen and D-sektionen themes, Roboto is switched out for Helvetica.
 
 #### 📥 In an existing presentation
 1. Download or copy the neobeam.css file into your project OR use the direct link.
