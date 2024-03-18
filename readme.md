@@ -137,7 +137,11 @@ Heres an example of a title slide. As long as you follow as similar format it sh
 
 ```
 ### Headings
-Instead of defininig a static header, one gets created by the first H1 (single #) in the slide. 
+~~Instead of defininig a static header, one gets created by the first H1 (single #) in the slide.~~
+
+> [!NOTE]
+> This is currently deprecated, but will come back in some form soon.
+
 ### Footers
 Every page has a footer. It's made from the footer content defined in the beginning of the presentation markdown, and the sections are split by using ** (to create children objects). The footer is a flex-box and I've made it split itself into three sections. You could likely with some modifications change this fairly easily.
 ### Math
