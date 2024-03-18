@@ -87,7 +87,7 @@ Theme | Based on
 > This font by default uses the fonts Roboto, Roboto Mono (for code) and Noto Sans Math (for math). These are imported in the CSS file, but you can aquire them yourself too, or change them out. In the LTH C-sektionen and D-sektionen themes, Roboto is switched out for Helvetica.
 
 #### 📥 In an existing presentation
-1. Download or copy the neobeam.css file into your project OR use the direct link.
+1. Download or copy the neobeam.css (or specific theme) file into your project OR use the direct link.
 2. Add it to your VSCode settings by editing your ``.vscode/settings.json`` file and appending:
 ```json
   //...
@@ -112,9 +112,12 @@ footer: '**Author**
          **Title**
          **Conference/course/e.t.c.**'
 ```
+The theme names are written as presented in the table in the previews section.
 
 #### ✨️ As a template
-Simply clone or fork this repo or download the release. If you wish, you can delete the previews folder.
+Simply clone or fork this repo or download the release. If you wish, you can delete the previews folder. 
+
+All themes are registered and ready in the template.
 
 ---
 
