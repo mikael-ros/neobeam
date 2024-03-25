@@ -1,5 +1,5 @@
-<p align="center" style="background-color: transparent; width: 60%">
-    <img src="assets/neobeam.svg">
+<p align="center">
+    <img style="background-color: transparent" src="assets/neobeam.svg">
 </p>
 
 ## ✨️A modern take on LaTeX beamer 
