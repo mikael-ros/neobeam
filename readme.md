@@ -23,7 +23,6 @@ I'm not sure how to solve the last one, but this theme is my attempt to address 
 > Consider the [license](LICENSE) of this project as well, and Marp itself.
 >
 > All fonts used in the theme by default are imported from Google Fonts. Consider the privacy aspects of this yourself and choose wheter you want local installs of them or not. This was a choice made to enable direct linking of the theme to work.
-ä
 
 ---
 ## 📺 Previews
