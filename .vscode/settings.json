@@ -6,7 +6,7 @@
         "css/neobeam-csek.css",
         "css/neobeam-lund.css"
     ],
-    "markdown.marp.enableHtml": false,
+    "markdown.marp.enableHtml": true,
     "markdown.marp.exportType": "html",
     "markdown.marp.mathTypesetting": "katex"
 }

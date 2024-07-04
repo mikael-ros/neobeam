@@ -288,6 +288,10 @@ section {
     background-color: var(--text-color-negative-lighter);
 }
 
+section p {
+    padding-right: 20%;
+}
+
 section header{
     position: absolute;
     top: 0;
@@ -388,6 +392,7 @@ section.title p{
     position: relative;
     text-align: center;
     margin-left: 0;
+    padding: 0;
     font-weight: 500;
 }
 
