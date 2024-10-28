@@ -24,22 +24,29 @@
     /* -- Colors -- */
     /* Primary, and variations */
     --primary:          #4d85d1;
-    --lighter-primary:  hsl(from var(--primary) h calc(s - .01) calc(l + .075));
-    --darker-primary:   hsl(from var(--primary) h calc(s + .01) calc(l - .075));
-    --darkest-primary:  hsl(from var(--primary) h calc(s + .02) calc(l - .15));
+    --saturation-multiplier: 1;
+    --saturation-decreaser: 1;
+    --brightness-multiplier: 1;
+    --brightness-decreaser: 2;
+    --color-shift: 30;
+
+    --lighter-primary:  hsl(from var(--primary) h calc(s - var(--saturation-decreaser) * .2) calc(l + var(--brightness-multiplier) * .045));
+    --darker-primary:   hsl(from var(--primary) h calc(s + var(--saturation-multiplier) * .01) calc(l - var(--brightness-decreaser) * .075));
+    --darkest-primary:  hsl(from var(--primary) h calc(s + var(--saturation-multiplier) * .01) calc(l - var(--brightness-decreaser) * .15));
  
-    --text-color:           hsl(from var(--primary) h calc(s - .9) calc(l - .5));
-    --text-color-lighter:   hsl(from var(--text-color) h s calc(l + .1));
-    --text-color-lightest:  hsl(from var(--text-color) h s calc(l + .2));
+    --text-color:           hsl(from var(--primary) h calc(s - var(--saturation-decreaser) * .9) calc(l - var(--brightness-decreaser) * .5));
+    --text-color-lighter:   hsl(from var(--text-color) h s calc(l + var(--brightness-multiplier) * .1));
+    --text-color-lightest:  hsl(from var(--text-color) h s calc(l + var(--brightness-multiplier) * .2));
 
-    --text-color-negative:          hsl(from var(--primary) h s calc(l + .4));
-    --text-color-negative-lightest: hsl(from var(--text-color-negative) h s calc(l + .1));
-    --text-color-negative-lighter:  hsl(from var(--text-color-negative) h s calc(l + .2));
-    --text-color-negative-darker:   hsl(from var(--text-color-negative) h s calc(l - .1));
+    --text-color-negative:          hsl(from var(--primary) h calc(s - var(--saturation-decreaser) * .1) calc(l + var(--brightness-multiplier) * .35));
+    --text-color-negative-lightest: hsl(from var(--text-color-negative) h s calc(l + var(--brightness-multiplier) * .2));
+    --text-color-negative-lighter:  hsl(from var(--text-color-negative) h s calc(l + var(--brightness-multiplier) * .25));
+    --text-color-negative-darker:   hsl(from var(--text-color-negative) h s calc(l - var(--brightness-decreaser) * .1));
 
-    --highlight-color-one:    var(--primary);
-    --highlight-color-two:  #cc682d;
-    --highlight-color-three:#009d99;
+    --highlight-color-one:      var(--primary);
+    --highlight-color-two:      hsl(from var(--primary) calc(h + var(--color-shift)) calc(s - var(--saturation-decreaser) * .15) calc(l + var(--brightness-multiplier) * .1));
+    --highlight-color-three:    hsl(from var(--primary) calc(h - var(--color-shift)) calc(s - var(--saturation-decreaser) * .15) calc(l + var(--brightness-multiplier) * .1));
+
 
     --definition-height: 1.5em;
     --header-height: 2.5rem;
@@ -342,7 +349,7 @@ blockquote:has(> h4) {
     padding: 0;
     border: none; /* Remove line */
     --block-fg-color: var(--highlight-color-one);
-    --block-bg-color: hsl(from var(--block-fg-color) h calc(s - .1) calc(l + .2));
+    --block-bg-color: hsl(from var(--block-fg-color) h calc(s - .1) calc(l + .05));
 
     color: var(--text-color-negative);
 }
@@ -363,11 +370,11 @@ blockquote:has(> h4) p{
     min-height: var(--definition-height);
 }
 
-blockquote:has(> h4):nth-of-type(2){
+blockquote:has(> h4):nth-of-type(2n){
     --block-fg-color: var(--highlight-color-two);
 }
 
-blockquote:has(> h4):nth-of-type(3){
+blockquote:has(> h4):nth-of-type(3n){
     --block-fg-color: var(--highlight-color-three);
 }
 /*===================*/
@@ -419,6 +426,7 @@ table th:last-child {
 table th{
     background-color: var(--lighter-primary);
     border-bottom-width: .25em;
+    color: var(--text-color-negative);
 }
 
 /* Every other row */
