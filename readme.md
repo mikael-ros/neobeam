@@ -34,27 +34,27 @@ I'm not sure how to solve the last one, but this theme is my attempt to address 
 ### Static previews
 N<sub>E</sub>Obeam            |  beamer
 :-------------------------:|:-------------------------:
-![Neobeam](previews/default/neobeam-1.png)  |  ![Beamer](https://www.latextemplates.com/actions/action_fetch_template_image?image=1&template=beamer-presentation)
+![Neobeam](previews/neobeam/neobeam-1.png)  |  ![Beamer](https://www.latextemplates.com/actions/action_fetch_template_image?image=1&template=beamer-presentation)
 
 Image on the right courtesy of [latextemplates.com](https://www.latextemplates.com). Will eventually be replaced by my own.
 
 #### Main title
-![Main title preview](previews/default/neobeam-1.png)
+![Main title preview](previews/neobeam/neobeam-1.png)
 #### A slide with text
-![Text title preview](previews/default/neobeam-3.png)
+![Text title preview](previews/neobeam/neobeam-3.png)
 #### Science slides
 Math            |  Code
 :-------------------------:|:-------------------------:
-![Math](previews/default/neobeam-5.png)  |  ![Code](previews/default/neobeam-4.png)
+![Math](previews/neobeam/neobeam-5.png)  |  ![Code](previews/neobeam/neobeam-4.png)
 ### Special elements
 Images            |  Tables
 :-------------------------:|:-------------------------:
-![Images](previews/default/neobeam-7.png)  |  ![Tables](previews/default/neobeam-6.png)
+![Images](previews/neobeam/neobeam-7.png)  |  ![Tables](previews/neobeam/neobeam-6.png)
 #### HTML styling
 > [!NOTE]
 > This is optionally enabled! See features & quirks.
 
-![HTML styling](previews/default/neobeam-8.png)
+![HTML styling](previews/neobeam/neobeam-8.png)
 
 ### 🖌️ Theme versions
 > Click on the theme to see a live preview
@@ -72,7 +72,7 @@ Theme | Based on
 
  Default | beamer theme | LTH D-sektionen | LTH C-sektionen | LTH/Lund University 
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
- ![Neobeam](previews/default/neobeam-1.png) | ![Beamer](previews/beamer/beamer-1.png) | ![D-sek](previews/dsek/dsek-1.png) | ![D-sek](previews/csek/csek-1.png) | ![Lund](previews/lund/lund-1.png)
+ ![Neobeam](previews/neobeam/neobeam-1.png) | ![Beamer](previews/beamer/beamer-1.png) | ![D-sek](previews/dsek/dsek-1.png) | ![D-sek](previews/csek/csek-1.png) | ![Lund](previews/lund/lund-1.png)
 
 ---
 
