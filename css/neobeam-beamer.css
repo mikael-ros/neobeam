@@ -1,262 +1,500 @@
-/* @theme neobeam-beamer */
+/*!
+ * Marp default theme.
+ *
+ * @theme neobeam-beamer
+ * @author Embracket / mikael-ros
+ *
+ * @auto-scaling true
+ * @size 16:9 1920px 1090px
+ * @size 4:3 960px 720px
+ */
 
+/***********/
+/* Imports */
+/***********/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Math&display=swap');
 @import "default";
 
-:root{
-    /* -- Variables -- */
-     --lighter-primary: #3333b2;
-     --primary: #3333b2;
-     --darker-primary: #262686; 
-     --darkest-primary: #191959;
+/************/
+/* Defaults */
+/************/
+:root {
+    /* -- Colors -- */
+    /* Primary, and variations */
+    --primary:          #3333b2;
+    --saturation-multiplier: .6;
+    --saturation-decreaser: .25;
+    --brightness-multiplier: 1.4;
+    --brightness-decreaser: 1;
+    --build-multiplier: 100; /* Set to 1 when working in vscode, 100 when building */
+    --color-shift: 120;
+
+    --lighter-primary:  hsl(from var(--primary) h calc(s - var(--saturation-decreaser) * var(--build-multiplier) * .2) calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .045));
+    --darker-primary:   hsl(from var(--primary) h calc(s + var(--saturation-multiplier) * var(--build-multiplier) * .01) calc(l - var(--brightness-decreaser) * var(--build-multiplier) * .075));
+    --darkest-primary:  hsl(from var(--primary) h calc(s + var(--saturation-multiplier) * var(--build-multiplier) * .01) calc(l - var(--brightness-decreaser) * var(--build-multiplier) * .15));
  
-     --text-color: #01010a;
-     --text-color-lighter: #101040;
-     --text-color-lightest: #1e1e4e;
- 
-     --text-color-negative-lightest: #fff;
-     --text-color-negative-lighter: #eef;
-     --text-color-negative: #dde;
-     --text-color-negative-darker: #ccd;
- 
-     --highlight-color-one: var(--darkerprimary);
-     --highlight-color-one-background: #e9e9f3;
-     --highlight-color-two: #bf0000;
-     --highlight-color-two-background: #f9e6e6;
-     --highlight-color-three: #006000;
-     --highlight-color-three-background: #e6efe6;
-    --border-radius: 0.8rem;
+    --text-color:           hsl(from var(--primary) h calc(s - var(--saturation-decreaser) * var(--build-multiplier) * .9) calc(l - var(--brightness-decreaser) * var(--build-multiplier) * .5));
+    --text-color-lighter:   hsl(from var(--text-color) h s calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .1));
+    --text-color-lightest:  hsl(from var(--text-color) h s calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .2));
+
+    --text-color-negative:          hsl(from var(--primary) h calc(s - var(--saturation-decreaser) * var(--build-multiplier) * .1) calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .35));
+    --text-color-negative-lightest: hsl(from var(--text-color-negative) h s calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .2));
+    --text-color-negative-lighter:  hsl(from var(--text-color-negative) h s calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .25));
+    --text-color-negative-darker:   hsl(from var(--text-color-negative) h s calc(l - var(--brightness-decreaser) * var(--build-multiplier) * .1));
+
+    --highlight-color-one:      var(--primary);
+    --highlight-color-two:      hsl(from var(--primary) calc(h + var(--color-shift)) calc(s - var(--saturation-decreaser) * var(--build-multiplier) * .15) calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .1));
+    --highlight-color-three:    hsl(from var(--primary) calc(h - var(--color-shift)) calc(s - var(--saturation-decreaser) * var(--build-multiplier) * .15) calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .1));
+
+    --definition-height: 1.5em;
+    --header-height: 2.5rem;
+    --footer-height: calc(.6*var(--header-height));
+
+    --top-margin: calc(1.5*var(--header-height));
+    --left-right-margin: calc((var(--header-height) + var(--footer-height))/2);
+    --bottom-margin: calc(1.5*var(--footer-height));
+    --margin: var(--top-margin)
+              var(--left-right-margin)
+              var(--bottom-margin)
+              var(--left-right-margin);
+    --text-padding: .5em;
+
+    --border-radius-softer: calc(1.25*var(--border-radius-default));
+    --border-radius-default: 0.8rem;
+    --border-radius-harder: calc(0.75*var(--border-radius-default));
+
+    --background-color: var(--text-color-negative-lighter);
 
     --default-font: "Roboto";
     --monospace-font: "Roboto Mono";
     --math-font: "Noto Sans Math";
 
-    /* -- Presentation wide default */
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-
     font-family: var(--default-font);
     font-size: 28px;
+    line-height: 1.5;
     color: var(--text-color);
 }
 
-/* ..................... */
-/* | Specific elements | */
-/* ````````````````````` */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6{
-    margin-left: 1rem;
-    color: var(--text-color);
-}
-
-p{
-    margin-left: 1rem;
-    color: var(--text-color-lighter)
-}
-
-ul, ol{
-    margin-left: 1rem;
-}
-
-blockquote {
-    min-width: 10%;
-    max-width: 60%;
-    margin-left: 1rem;
-    padding: .5em;
-    border-radius: var(--border-radius);
-    border-color: var(--text-color-negative-darker);
-    background-color: var(--text-color-negative);
-}
-
-blockquote *{
+/* Unset unwanted rules and set some defaults */
+*,
+*::after,
+*::before {
     margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+}
+
+/*-----------------------------------------------------------*/
+/**********************/
+/* Basic text styling */
+/**********************/
+section > h1,
+section > h2,
+section > h3,
+section > h4,
+section > h5,
+section > h6 {
+    color: var(--text-color-lighter);
+    margin: .25em 0;
+}
+
+/*-----------------------------------------------------------*/
+/************/
+/* Sections */
+/************/
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    
+    background: var(--background-color);
+
+    padding: var(--margin);
+}
+
+/*-----------------------------------------------------------*/
+/*********************/
+/* Footers & headers */
+/*********************/
+
+/* Both share common styling */
+section header, footer {
+    --_height: var(--height, fit-content);
+    --_radius: var(--radius, var(--text-padding));
+
+    position: absolute;
+    left: 0;
+
+    height: var(--_height);
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    /* Hide overflowing text */
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    background-color: var(--primary);
+    color: var(--text-color-negative);
+}
+
+/* Headers */
+section header {
+    /* Position at top */
+    top: 0;
+    
+    /* Compensate for radius */
+    padding: var(--_radius);
+    --height: calc(var(--header-height) + .5*var(--_radius));
+    --radius: var(--border-radius-default);
+
+    font-weight: 600;
+    font-size: 1.25rem;
+
+    border-radius: 0 0 var(--_radius) var(--_radius);
+}
+
+/* Footers */
+footer {
+    /* Position at bottom */
+    bottom: 0;
+
+    --height: var(--footer-height);
+    
+    font-size: 0.65rem;
+    
+    /* Leave space for pagination number */
+    padding-right: calc(.5*var(--footer-height) + .5*var(--text-padding));
+}
+
+/* The pagination index */
+section::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    bottom: 0; /* Remove margin */
+    right: calc(.5*var(--text-padding));
+
+    height: var(--footer-height);
+    width: calc(0.5*var(--footer-height));
+    color: var(--text-color-negative);
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* * = strong, currently */
+footer > * {
+    position: relative;
+    --_bg-color: var(--bg-color, var(--darker-primary));
+    --radius: calc(var(--height) / 2);
+
+    height: 100%;
+    line-height: var(--height);
+    flex: 1; /* Share space evenly */
+    
+    padding: var(--_radius);
+    text-align: center;
+    font-weight: initial; /* Reset weight */
+    
+    background-color: var(--_bg-color);
+    
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 0;
+    padding-left: var(--text-padding);
+    
+    z-index: 2;
+}
+
+/* All fields but the first */
+footer > *:nth-of-type(n+2) {
+    /* Compensate for radius */
+    left: calc(-1 * var(--radius));
+    padding-left: calc(.5 * var(--radius));
+}
+
+/* First field */
+footer > *:nth-of-type(1) {
+    --bg-color: var(--darkest-primary);
+    text-align: left;
+    z-index: 3;
+}
+
+/* Last field */
+footer > *:nth-of-type(3) {
+    --bg-color: var(--primary);
+    text-align: right;
+
+    border-radius: 0;
+    z-index: 1;
+}
+
+/*-----------------------------------------------------------*/
+/***************/
+/* Title slide */
+/***************/
+
+section.title {
+    display: flex;
+    gap: 1em;
+    
+    /* Position everything in middle */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0; /* Remove otherwise present padding */
+}
+
+section.title > * {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Title blob */
+section.title h1 {
+    width: fit-content;
+    max-width: 80%;
+
+    padding: var(--text-padding) calc(2*var(--text-padding));
+
+    background-color: var(--primary);
+    color: var(--text-color-negative);
+    border-radius: var(--border-radius-default);
+}
+
+section.title blockquote {
+    all: unset; /* Unset any settings brought on by other blockquote styling */
     color: var(--text-color-lightest);
 }
 
-/* Definition yank */
-blockquote h4, blockquote h4+p{
-    border-radius: var(--border-radius);
-    color: var(--text-color);
-}
+/* Logo */
+section.title img[alt*="logo"] {
+    --offset: -5%;
+    --rotate: -45deg;
 
-blockquote:has(> h4){
-    padding: 0;
-    border: none;
-    background-color: var(--highlight-color-one-background);
-}
-
-blockquote h4{
-    width: calc(100% - 1em);
-    height: 1.25em;
-    padding: .5em;
+    /* Position in lower right, by default */
+    position: absolute;
     margin: 0;
-    
-    line-height: 1.25em;
-    background-color: var(--highlight-color-one);
-    
-    opacity: 0.8;
+    right:  var(--offset);
+    bottom: 0;
+
+    width: 350px;
+    object-fit: contain;
+
+    /* Rotate it slightly */
+    transform: rotate(var(--rotate));
+    opacity: 0.5;
 }
 
-blockquote h4+p{
-    width: 100%;
-    margin: 0;
-    padding: 0.5em;
+/* Logo left side */
+section.title img[alt~="logo-left"] {
+    /* Position in lower left */
+    right:  unset;
+    left: var(--offset);
+    --rotate: 45deg;
 }
 
-blockquote:has(> h4):nth-of-type(2) h4{
-    background-color: var(--highlight-color-two);
+/*-----------------------------------------------------------*/
+/*********/
+/* Lists */
+/*********/
+
+ul, ol {
+    line-height: 1.75;
+    margin: calc(.5*var(--text-padding)) 0;
+    padding: 0 1em; /* Compensate for list number / dot */
 }
 
-blockquote:has(> h4):nth-of-type(2){
-    background-color: var(--highlight-color-two-background);
-}
+/*-----------------------------------------------------------*/
+/********************************/
+/* Quotes, tables & code blocks */
+/********************************/
 
-blockquote:has(> h4):nth-of-type(3) h4{
-    background-color: var(--highlight-color-three);
-}
+/* Styling applied to both */
+blockquote, pre, table {
+    --_block-bg-color: var(--block-bg-color, var(--text-color-negative));
+    --radius: var(--border-radius-default);
+    min-width: 40%;
+    width: fit-content;
+    max-width: 60%;
 
-blockquote:has(> h4):nth-of-type(3){
-    background-color: var(--highlight-color-three-background);
-}
+    padding: var(--text-padding);
+    margin: calc(.75*var(--text-padding)) 0;
 
+    border-radius: var(--radius);
+    background-color: var(--_block-bg-color);
 
-
-/* Code block, math, table */
-pre, .katex, table, code{
     color: var(--text-color-lighter);
 }
+/*===================*/
 
-pre, code{
-    border-radius: var(--border-radius);
-    background-color: var(--text-color-negative);
+/* Quotes */
+blockquote {
+    border-left: solid calc(.5*var(--text-padding)) var(--text-color-negative-darker);
+}
+
+/* Definition blocks */
+blockquote:has(> h4) {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0;
+    border: none; /* Remove line */
+    --block-fg-color: var(--highlight-color-one);
+    --block-bg-color: hsl(from var(--block-fg-color) h calc(s - var(--saturation-decreaser) * var(--build-multiplier) * .1) calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .05));
+
+    color: var(--text-color-negative);
+}
+
+blockquote:has(> h4) > * {
+    margin: 0;
+    padding: var(--text-padding);
+    border-radius: var(--radius);
+}
+
+/* The selector is redundant, it's just for clarity */
+blockquote:has(> h4) h4{
+    flex-basis: var(--definition-height); /* Take up that height */
+    background-color: var(--block-fg-color);
+}
+
+blockquote:has(> h4) p{
+    min-height: var(--definition-height);
+}
+
+blockquote:has(> h4):nth-of-type(2n){
+    --block-fg-color: var(--highlight-color-two);
+}
+
+blockquote:has(> h4):nth-of-type(3n){
+    --block-fg-color: var(--highlight-color-three);
+}
+/*===================*/
+
+/* Code blocks */
+pre, code, samp {
     font-family: var(--monospace-font);
+
+    /* Unset default theme setting */
+    border: none; 
+    line-height: unset;
 }
 
-pre {
-    margin-left: 1rem;
-    padding: 1em;
-    min-width: 20%;
-    max-width: 70%;
-    min-height: 10%;
-    max-height: 40%; overflow: hidden; /* To avoid it squeezing out the slide */
-
-    font-size: 0.75em;
-    opacity: 0.9;
-}
-
-.katex {
-    font-family: var(--math-font);
-    font-size: 0.9em;
-}
-
-.katex p{
-    margin-left: initial;
-}
+/*===================*/
 
 /* Tables */
 table {
-    margin-left: 1rem;
-
-    border-radius: var(--border-radius);
-    border-style: solid;
-    border-width: .1em;
-    border-color: var(--text-color-negative-darker);
-    
-    opacity: 0.9;
+    color: var(--text-color-lighter);
+    border: solid .1em var(--text-color-negative-darker);
+    padding: 0; /* No internal padding. Inhereted from the settings higher up */
+    border-spacing: 0; /* Remove weird table spacing */
 }
 
-table th td{
-    border: none;
+table tr td, table th {
+    padding: calc(.5*var(--text-padding)) var(--text-padding); 
+    --border: solid .1em var(--text-color-negative);
+    border-right: var(--border);
+    border-bottom: var(--border);
 }
 
-th{
-    background-color: var(--lighter-primary);
-    border: 0;
-    border-bottom-width: 2px;
-    border-top-width: 0;
+/* Last rows elements should not have a bottom border */
+table tr:last-child td {
+    border-bottom: none;
 }
 
-thead {
-    border: var(--border-radius) var(--border-radius) 0 0;
+/* Last column shouldnt have a right border */
+table th:last-child, tr td:last-child {
+    border-right: none;
 }
 
-thead > tr {
-    border-top-width: 0;
+table th:first-child {
+    border-top-left-radius: var(--radius);
 }
 
-td:first-child, th:first-child{
-    border-left-width: 0;
-}
-
-td:last-child, th:last-child{
-    border-right-width: 0;
+table th:last-child {
+    border-top-right-radius: var(--radius);
 }
 
 table th{
-    border-top-width: 0;
+    background-color: var(--lighter-primary);
+    border-bottom-width: .25em;
+    color: var(--text-color-negative);
 }
 
-tbody > tr:last-child td{
-    border-bottom-width: 0;
-}
-
-table th:first-of-type{
-    border-top-left-radius: var(--border-radius);
-}
-
-table th:last-of-type{
-    border-top-right-radius: var(--border-radius);
-}
-
-table > tr:nth-of-type(2n-1){
+/* Every other row */
+table tr:nth-of-type(2n-1){
     background-color: var(--text-color-negative-lightest);
 }
 
-table > tr:nth-of-type(2n){
-    background-color: var(--text-color-negative-lighter);
-}
-
-table > tr:last-of-type{
-    border-radius: 0 0 var(--border-radius) var(--border-radius);
-}
-
+/*-----------------------------------------------------------*/
+/**********/
 /* Images */
+/**********/
 img {
     display: block;
+    width: fit-content;
     max-width: 50%;
-    max-height: 90%;
-    margin: .5em 1em .5em 0;
+    margin: var(--text-padding) 0;
 
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-default);
 
-    background-color: transparent !important;
+    background-color: transparent !important; /* Support for transparent backgrounds */
 }
 
-img[alt~="left"]{
+img[alt*="left"], img[alt*="right"] {
+    margin: var(--text-padding);
+}
+
+img[alt*="left"]{
     float:left;
 }
 
-img[alt~="center"]{
-    margin: 0 auto;
+img[alt*="center"]{
+    margin: var(--text-padding) auto;
 }
 
-img[alt~="right"]{
+img[alt*="right"]{
     float:right;
 }
 
-/* HTML vodoo */
+/* The heading (level 6) that comes after an img is treated as a caption */
+:has(img)+h6 {
+    color: var(--text-color-lightest);
+    font-weight: initial;
+    margin-top: calc(-2*var(--text-padding));
+    font-size: .8em;
+}
+
+/*-----------------------------------------------------------*/
+/*******************/
+/* Inline elements */
+/*******************/
+
+:not(pre) > code, mark {
+    --_hl-color: var(--hl-color, var(--text-color-negative));
+    background-color: var(--_hl-color);
+    color: var(--text-color-lightest);
+}
+
+/* :not(pre) selects code only when it is not inside a code block */
+:not(pre) > code {
+    font-family: var(--monospace-font);
+    padding: calc(.25*var(--text-padding)) var(--text-padding);
+    border-radius: 1em;
+}
+
 mark {
-    padding: 0 .5em 0 .5em;
-    background-color: var(--highlight-color-two-background);
-    border-radius: var(--border-radius);
+    --hl-color: hsl(from var(--highlight-color-two) h calc(s + var(--saturation-multiplier) * var(--build-multiplier) * .15) calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .1));
+    padding: 0 calc(.25*var(--text-padding));
+    border-radius: .25em;
 }
 
 abbr {
@@ -267,220 +505,20 @@ var, samp {
     color: var(--highlight-color-two);
 }
 
-samp {
-    font-family: var(--monospace-font);
-}
-
 q {
     font-weight: 300;
+    font-style: italic;
 }
 
 audio {
-    opacity: 0.75;
+    margin: var(--text-padding) 0;
 }
 
-/* ............ */
-/* | Sections | */
-/* ```````````` */
-
-section {
-    background-color: var(--text-color-negative-lighter);
+.katex {
+    font-family: var(--math-font);
+    font-size: 0.9em;
 }
 
-section p {
-    padding-right: 20%;
-}
-
-section header{
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    margin-left: 0;
-    padding: .5em;
-
-    width: calc(100% - 1em);
-    min-height: 1.5rem;
-
-    line-height: 1.5rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-
-    border-radius: 0 0 var(--border-radius) var(--border-radius);
-    background-color: var(--darker-primary);
-    color: var(--text-color-negative);
-    opacity: 0.8;
-}
-
-/* The index */
-section::after{
-    color: var(--text-color-negative);
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding: 0 0 .1em 0;
-    margin: 0;
-
-    font-size: 1.5rem;
-
-    height: 1em;
-    width: 1em;
-}
-
-/* .......... */
-/* | Footer | */
-/* `````````` */
-
-footer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    
-    display: flex;
-    
-    width: 100%;
-    height: 1.5rem;
-}
-
-footer * {
-    width: calc(100% + var(--border-radius));
-    height: 100%;
-
-    padding: 0 calc(0.5em + var(--border-radius)) 0;
-    margin-left: calc(-1*var(--border-radius));
-    line-height: 1.5rem;
-
-    font-weight: initial; /* Removes boldness */
-    color: var(--text-color-negative);
-}
-
-/* The leftmost field */
-footer strong:nth-of-type(1){
-    background-color: var(--darkest-primary);
-    border-radius: 0 var(--border-radius) var(--border-radius) 0;
-    z-index: 2;
-}
-
-/* The middle field */
-footer strong:nth-of-type(2){
-    text-align: center;
-    background-color: var(--darker-primary);
-    border-radius: 0 var(--border-radius) var(--border-radius) 0;
-    z-index: 1;
-}
-
-/* The right field */
-footer strong:nth-of-type(3){
-    padding-right: calc(1.5rem + 0.5em);
-    text-align: right;
-    background-color: var(--primary);
-}
-
-/* -------------------------------------------------------- */
-/* Specific classes                                         */
-/* -------------------------------------------------------- */
-
-/* ......... */
-/* | Title | */
-/* ````````` */
-
-section.title h1,
-section.title h2,
-section.title h3,
-section.title p{
-    position: relative;
-    text-align: center;
-    margin-left: 0;
-    padding: 0;
-    font-weight: 500;
-}
-
-section.title p{
-    font-weight: initial;
-}
-
-section.title h1:first-of-type{
-    margin: 0 auto;
-    padding: .5em;
-
-    width: 80%;
-    min-height: 2.5rem;
-
-    line-height: 2.5rem;
-
-    border-radius: var(--border-radius);
-
-    background-color: var(--darker-primary);
-    color: var(--text-color-negative);
-}
-
-section.title h3 ~ p{
-    margin: -0.25em auto;
-}
-
-section.title p:has(>img){
-    position: absolute;
-    bottom: 0;
-    right: 0;
-
-    width: 100%;
-    height: 400px;
-}
-
-section.title img[alt~="logo"]{
-    position: absolute;
-    margin: 0;
-    right:  -5%;
-    bottom: 0;
-
-    width: 400px;
-    object-fit: contain;
-
-    transform: rotate(-45deg);
-    opacity: 0.5;
-}
-
-section.title blockquote{
-    margin: 1rem auto;
-    padding: 0;
-    border: none; /* Removes the blockquote border */
-    background-color: transparent; 
-}
-
-section.title blockquote *{
-    margin: initial;
-}
-
-/* Definition yank */
-section.title blockquote h4, section.title blockquote h4+p{
-    color: initial;
-}
-
-section.title blockquote h4{
-    width: auto;
-    height: auto;
-    padding: 0;
-
-    line-height: initial;
-    background-color: none;
-}
-
-section.title blockquote h4+p{
-    width: initial;
-}
-
-section.title blockquote:nth-of-type(2) h4{
-    background-color: none;
-}
-
-section.title blockquote:nth-of-type(2) h4+p{
-    background-color: none;
-}
-
-section.title blockquote:nth-of-type(3) h4{
-    background-color: none;
-}
-
-section.title blockquote:nth-of-type(3) h4+p{
-    background-color: none;
+.katex p{
+    margin-left: initial;
 }

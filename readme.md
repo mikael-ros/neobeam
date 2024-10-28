@@ -10,9 +10,11 @@ Find the classic beamer outdated? Are your students losing focus due to it? 💤
 I'm not sure how to solve the last one, but this theme is my attempt to address the first issue: too many a new presentation look decades old due to the classic look of beamer.
 
 > [!NOTE]
-> _[Marp]() is a presentation framework that allows users to create presentations with Markdown and CSS. While this theme relies on Marp to be used, it is not directly affiliated with or sponsored by it._
+> _[Marp](https://marp.app/) is a presentation framework that allows users to create presentations with Markdown and CSS. While this theme relies on Marp to be used, it is not directly affiliated with or sponsored by it._
 >
 > Inspired by, but not affiliated with or sourced from, the Marp [beam theme made by rnd195](https://github.com/rnd195/my-marp-themes). As mentioned, I have not used any of their code to create this theme.
+
+<a href='https://ko-fi.com/Z8Z212GZR6' target='_blank'><img height='60' style='border:0px;height:60px;' src='https://storage.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 #### Disclaimer
 
@@ -32,27 +34,27 @@ I'm not sure how to solve the last one, but this theme is my attempt to address 
 ### Static previews
 N<sub>E</sub>Obeam            |  beamer
 :-------------------------:|:-------------------------:
-![Neobeam](previews/default/example-1.png)  |  ![Beamer](https://www.latextemplates.com/actions/action_fetch_template_image?image=1&template=beamer-presentation)
+![Neobeam](previews/default/neobeam-1.png)  |  ![Beamer](https://www.latextemplates.com/actions/action_fetch_template_image?image=1&template=beamer-presentation)
 
 Image on the right courtesy of [latextemplates.com](https://www.latextemplates.com). Will eventually be replaced by my own.
 
 #### Main title
-![Main title preview](previews/default/example-1.png)
+![Main title preview](previews/default/neobeam-1.png)
 #### A slide with text
-![Text title preview](previews/default/example-3.png)
+![Text title preview](previews/default/neobeam-3.png)
 #### Science slides
 Math            |  Code
 :-------------------------:|:-------------------------:
-![Math](previews/default/example-5.png)  |  ![Code](previews/default/example-4.png)
+![Math](previews/default/neobeam-5.png)  |  ![Code](previews/default/neobeam-4.png)
 ### Special elements
 Images            |  Tables
 :-------------------------:|:-------------------------:
-![Images](previews/default/example-7.png)  |  ![Tables](previews/default/example-6.png)
+![Images](previews/default/neobeam-7.png)  |  ![Tables](previews/default/neobeam-6.png)
 #### HTML styling
 > [!NOTE]
 > This is optionally enabled! See features & quirks.
 
-![HTML styling](previews/default/example-8.png)
+![HTML styling](previews/default/neobeam-8.png)
 
 ### 🖌️ Theme versions
 > Click on the theme to see a live preview
@@ -70,7 +72,7 @@ Theme | Based on
 
  Default | beamer theme | LTH D-sektionen | LTH C-sektionen | LTH/Lund University 
 :-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
- ![Neobeam](previews/default/example-1.png) | ![Beamer](previews/beamer/beamer-1.png) | ![D-sek](previews/dsek/dsek-1.png) | ![D-sek](previews/csek/csek-1.png) | ![Lund](previews/lund/lund-1.png)
+ ![Neobeam](previews/default/neobeam-1.png) | ![Beamer](previews/beamer/beamer-1.png) | ![D-sek](previews/dsek/dsek-1.png) | ![D-sek](previews/csek/csek-1.png) | ![Lund](previews/lund/lund-1.png)
 
 ---
 
@@ -84,6 +86,9 @@ Theme | Based on
 
 > [!TIP]
 > This font by default uses the fonts Roboto, Roboto Mono (for code) and Noto Sans Math (for math). These are imported in the CSS file, but you can aquire them yourself too, or change them out. In the LTH C-sektionen and D-sektionen themes, Roboto is switched out for Helvetica.
+
+> [!WARNING]
+> For reasons beyond my comprehension, it is necessary to use different notation for ``hsl`` in CSS in the Marp VS code preview as compared to the build version. To mitigate this I have added a ``build-multiplier`` variable to the CSS files. Set this to ``1`` when working in VS code, and ``100`` when exporting (or working in other ways).
 
 #### 📥 In an existing presentation
 1. Download or copy the neobeam.css (or specific theme) file into your project OR use the direct link.
