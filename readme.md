@@ -127,6 +127,9 @@ All themes are registered and ready in the template.
 
 ## 🪄 Features & quirks
 Most things work like you'd expect, but there are some quirks to keep the cogs turning.
+### Theming
+It is since v0.5 very easy to change the theme. There are now simple variables at the top of each CSS file, where it adjusts the colors and everything else completely automatically. 
+
 ### Title slide
 I opted not to always treat the first slide as a title slide, so to declare a slide (any slide actually) a title slide, add the following before the content: ``<!-- _class: title -->``. 
 
