@@ -28,25 +28,25 @@
     --saturation-decreaser: .5;
     --brightness-multiplier: 1;
     --brightness-decreaser: 1.25;
+    --build-multiplier: 100; /* Set to 1 when working in vscode, 100 when building */
     --color-shift: 50;
 
-    --lighter-primary:  hsl(from var(--primary) h calc(s - var(--saturation-decreaser) * .2) calc(l + var(--brightness-multiplier) * .045));
-    --darker-primary:   hsl(from var(--primary) h calc(s + var(--saturation-multiplier) * .01) calc(l - var(--brightness-decreaser) * .075));
-    --darkest-primary:  hsl(from var(--primary) h calc(s + var(--saturation-multiplier) * .01) calc(l - var(--brightness-decreaser) * .15));
+    --lighter-primary:  hsl(from var(--primary) h calc(s - var(--saturation-decreaser) * var(--build-multiplier) * .2) calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .045));
+    --darker-primary:   hsl(from var(--primary) h calc(s + var(--saturation-multiplier) * var(--build-multiplier) * .01) calc(l - var(--brightness-decreaser) * var(--build-multiplier) * .075));
+    --darkest-primary:  hsl(from var(--primary) h calc(s + var(--saturation-multiplier) * var(--build-multiplier) * .01) calc(l - var(--brightness-decreaser) * var(--build-multiplier) * .15));
  
-    --text-color:           hsl(from var(--primary) h calc(s - var(--saturation-decreaser) * .9) calc(l - var(--brightness-decreaser) * .5));
-    --text-color-lighter:   hsl(from var(--text-color) h s calc(l + var(--brightness-multiplier) * .1));
-    --text-color-lightest:  hsl(from var(--text-color) h s calc(l + var(--brightness-multiplier) * .2));
+    --text-color:           hsl(from var(--primary) h calc(s - var(--saturation-decreaser) * var(--build-multiplier) * .9) calc(l - var(--brightness-decreaser) * var(--build-multiplier) * .5));
+    --text-color-lighter:   hsl(from var(--text-color) h s calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .1));
+    --text-color-lightest:  hsl(from var(--text-color) h s calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .2));
 
-    --text-color-negative:          hsl(from var(--primary) h calc(s - var(--saturation-decreaser) * .1) calc(l + var(--brightness-multiplier) * .35));
-    --text-color-negative-lightest: hsl(from var(--text-color-negative) h s calc(l + var(--brightness-multiplier) * .2));
-    --text-color-negative-lighter:  hsl(from var(--text-color-negative) h s calc(l + var(--brightness-multiplier) * .25));
-    --text-color-negative-darker:   hsl(from var(--text-color-negative) h s calc(l - var(--brightness-decreaser) * .1));
+    --text-color-negative:          hsl(from var(--primary) h calc(s - var(--saturation-decreaser) * var(--build-multiplier) * .1) calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .35));
+    --text-color-negative-lightest: hsl(from var(--text-color-negative) h s calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .2));
+    --text-color-negative-lighter:  hsl(from var(--text-color-negative) h s calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .25));
+    --text-color-negative-darker:   hsl(from var(--text-color-negative) h s calc(l - var(--brightness-decreaser) * var(--build-multiplier) * .1));
 
     --highlight-color-one:      var(--primary);
-    --highlight-color-two:      hsl(from var(--primary) calc(h + var(--color-shift)) calc(s - var(--saturation-decreaser) * .15) calc(l + var(--brightness-multiplier) * .1));
-    --highlight-color-three:    hsl(from var(--primary) calc(h - var(--color-shift)) calc(s - var(--saturation-decreaser) * .15) calc(l + var(--brightness-multiplier) * .1));
-
+    --highlight-color-two:      hsl(from var(--primary) calc(h + var(--color-shift)) calc(s - var(--saturation-decreaser) * var(--build-multiplier) * .15) calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .1));
+    --highlight-color-three:    hsl(from var(--primary) calc(h - var(--color-shift)) calc(s - var(--saturation-decreaser) * var(--build-multiplier) * .15) calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .1));
     --definition-height: 1.5em;
     --header-height: 2.5rem;
     --footer-height: calc(.6*var(--header-height));
