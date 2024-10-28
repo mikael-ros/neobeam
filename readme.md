@@ -117,6 +117,7 @@ footer: '**Author**
          **Conference/course/e.t.c.**'
 ```
 The theme names are written as presented in the table in the previews section.
+4. Change ``build-multiplier`` to ``1``, if the preview looks wrong. Do not forget to change it back before you build.
 
 #### ✨️ As a template
 Simply clone or fork this repo or download the release. If you wish, you can delete the previews folder. 
