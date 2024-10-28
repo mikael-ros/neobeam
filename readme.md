@@ -87,6 +87,9 @@ Theme | Based on
 > [!TIP]
 > This font by default uses the fonts Roboto, Roboto Mono (for code) and Noto Sans Math (for math). These are imported in the CSS file, but you can aquire them yourself too, or change them out. In the LTH C-sektionen and D-sektionen themes, Roboto is switched out for Helvetica.
 
+> [!WARNING]
+> For reasons beyond my comprehension, it is necessary to use different notation for ``hsl`` in CSS in the Marp VS code preview as compared to the build version. To mitigate this I have added a ``build-multiplier`` variable to the CSS files. Set this to ``1`` when working in VS code, and ``100`` when exporting (or working in other ways).
+
 #### 📥 In an existing presentation
 1. Download or copy the neobeam.css (or specific theme) file into your project OR use the direct link.
 2. Add it to your VSCode settings by editing your ``.vscode/settings.json`` file and appending:

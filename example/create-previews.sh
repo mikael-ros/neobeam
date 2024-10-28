@@ -24,5 +24,5 @@ for theme in ../css/*.css; do
     done
 
     # Generate HTML slides, suppressing output
-    marp example.md --theme "$theme" -o "../previews/$themename/$themename.html" > /dev/null 2>&1
+    marp example.md --theme "$theme" -o "../previews/$themename/neobeam-$themename.html" > /dev/null 2>&1
 done

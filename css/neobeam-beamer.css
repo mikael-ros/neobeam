@@ -349,7 +349,7 @@ blockquote:has(> h4) {
     padding: 0;
     border: none; /* Remove line */
     --block-fg-color: var(--highlight-color-one);
-    --block-bg-color: hsl(from var(--block-fg-color) h calc(s - .1) calc(l + .05));
+    --block-bg-color: hsl(from var(--block-fg-color) h calc(s - var(--saturation-decreaser) * var(--build-multiplier) * .1) calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .05));
 
     color: var(--text-color-negative);
 }
@@ -492,7 +492,7 @@ img[alt*="right"]{
 }
 
 mark {
-    --hl-color: hsl(from var(--highlight-color-two) h calc(s + .5) calc(l + .3));
+    --hl-color: hsl(from var(--highlight-color-two) h calc(s + var(--saturation-multiplier) * var(--build-multiplier) * .15) calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .1));
     padding: 0 calc(.25*var(--text-padding));
     border-radius: .25em;
 }

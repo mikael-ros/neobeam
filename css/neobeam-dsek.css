@@ -492,7 +492,7 @@ img[alt*="right"]{
 }
 
 mark {
-    --hl-color: hsl(from var(--highlight-color-two) h calc(s + .5) calc(l + .3));
+    --hl-color: hsl(from var(--highlight-color-two) h calc(s + var(--saturation-multiplier) * var(--build-multiplier) * .15) calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .1));
     padding: 0 calc(.25*var(--text-padding));
     border-radius: .25em;
 }
