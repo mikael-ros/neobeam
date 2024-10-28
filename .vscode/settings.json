@@ -1,6 +1,7 @@
 {
     "markdown.marp.themes": [
         "css/neobeam.css",
+        "css/neobeam-new.css",
         "css/neobeam-beamer.css",
         "css/neobeam-dsek.css",
         "css/neobeam-csek.css",
