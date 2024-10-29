@@ -32,6 +32,14 @@
     --brightness-decreaser: 2;
     --color-shift: 30;
     
+    /* Font configuration */
+    --default-font: "Roboto";
+    --monospace-font: "Roboto Mono";
+    --math-font: "Noto Sans Math";
+
+    --font-size: 28px;
+
+    /* You shouldn't need to modify any below this point, unless you want to */
     --lighter-primary:  hsl(from var(--primary) h calc(s - var(--saturation-decreaser) * var(--build-multiplier) * .2) calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .045));
     --darker-primary:   hsl(from var(--primary) h calc(s + var(--saturation-multiplier) * var(--build-multiplier) * .01) calc(l - var(--brightness-decreaser) * var(--build-multiplier) * .075));
     --darkest-primary:  hsl(from var(--primary) h calc(s + var(--saturation-multiplier) * var(--build-multiplier) * .01) calc(l - var(--brightness-decreaser) * var(--build-multiplier) * .15));
@@ -68,12 +76,8 @@
 
     --background-color: var(--text-color-negative-lighter);
 
-    --default-font: "Helvetica";
-    --monospace-font: "Roboto Mono";
-    --math-font: "Noto Sans Math";
-
     font-family: var(--default-font);
-    font-size: 28px;
+    font-size: var(--font-size);
     line-height: 1.5;
     color: var(--text-color);
 }
@@ -172,17 +176,20 @@ footer {
 
 /* The pagination index */
 section::after {
+    content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
     display: flex;
     align-items: center;
     justify-content: center;
 
     position: absolute;
     bottom: 0; /* Remove margin */
-    right: calc(.5*var(--text-padding));
+    right: var(--text-padding);
 
     height: var(--footer-height);
-    width: calc(0.5*var(--footer-height));
+    line-height: var(--footer-height);
+    width: var(--footer-height);
     color: var(--text-color-negative);
+    font-size: calc(0.65 * var(--font-size)); /* For some reason simply writing 0.65rem won't do here */
 
     text-overflow: ellipsis;
     overflow: hidden;
@@ -237,7 +244,7 @@ footer > *:last-child {
     z-index: 1;
 
     /* Leave space for pagination number */
-    --pagination-space: calc(.5*var(--footer-height) + 2 * var(--text-padding));
+    --pagination-space: calc(var(--footer-height) + 2 * var(--text-padding));
     margin-left: calc(-2 * var(--radius-space) - var(--pagination-space));
     padding-left: calc(var(--text-padding) + var(--radius-space));
     padding-right: var(--pagination-space);

@@ -20,4 +20,8 @@
     --brightness-multiplier: 1;
     --brightness-decreaser: 1.25;
     --color-shift: 50;
+
+    --default-font: "Helvetica";
+    --monospace-font: "Roboto Mono";
+    --math-font: "Noto Sans Math";
 }
