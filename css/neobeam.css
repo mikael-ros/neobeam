@@ -21,7 +21,7 @@
 /* Defaults */
 /************/
 :root {
-    --build-multiplier: 100; /* Set to 1 when working in vscode, 100 when building */
+    --build-multiplier: 1; /* Set to 1 when working in vscode, 100 when building */
     
     /* -- Colors -- */
     /* Primary, and variations */
@@ -168,9 +168,6 @@ footer {
     --height: var(--footer-height);
     
     font-size: 0.65rem;
-    
-    /* Leave space for pagination number */
-    padding-right: calc(.5*var(--footer-height) + .5*var(--text-padding));
 }
 
 /* The pagination index */
@@ -189,6 +186,8 @@ section::after {
 
     text-overflow: ellipsis;
     overflow: hidden;
+
+    z-index: 2;
 }
 
 /* * = strong, currently */
@@ -208,33 +207,40 @@ footer > * {
     background-color: var(--_bg-color);
     
     border-radius: 0 var(--radius) var(--radius) 0;
-    padding: 0;
-    padding-left: var(--text-padding);
+    padding: 0 var(--text-padding);
     
     z-index: 2;
 }
 
 /* All fields but the first */
-footer > *:nth-of-type(n+2) {
+footer > *:nth-child(n+2) {
+    --radius-space: calc(.5 * var(--radius));
     /* Compensate for radius */
-    left: calc(-1 * var(--radius));
-    padding-left: calc(.5 * var(--radius));
+    margin-left: calc(-2 * var(--radius-space));
+    padding-left: calc(var(--text-padding) + var(--radius-space));
+    
 }
 
 /* First field */
-footer > *:nth-of-type(1) {
+footer > *:nth-child(1) {
     --bg-color: var(--darkest-primary);
     text-align: left;
     z-index: 3;
 }
 
 /* Last field */
-footer > *:nth-of-type(3) {
+footer > *:last-child {
     --bg-color: var(--primary);
     text-align: right;
 
     border-radius: 0;
     z-index: 1;
+
+    /* Leave space for pagination number */
+    --pagination-space: calc(.5*var(--footer-height) + 2 * var(--text-padding));
+    margin-left: calc(-2 * var(--radius-space) - var(--pagination-space));
+    padding-left: calc(var(--text-padding) + var(--radius-space) - var(--pagination-space));
+    padding-right: var(--pagination-space);
 }
 
 /*-----------------------------------------------------------*/
