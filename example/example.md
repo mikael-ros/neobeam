@@ -85,7 +85,7 @@ Images can be left-aligned, centered, and right-aligned!
 
 <h2>These are all the HTML elements I've styled!</h2>
 
-Text can be <mark>marked</mark>, <abbr title="abbreviated">abbr</abbr>, and be defined as <var>variable</var>. You can also do sample code outputs <samp>sample</samp> and quote things inline <q>like this</q>.
+Text can be <mark>marked</mark>, <abbr title="abbreviated">abbr</abbr> and you can quote things inline <q>like this</q>.
 
 You can embed audio like:
 <audio controls src="http://codeskulptor-demos.commondatastorage.googleapis.com/pang/pop.mp3" type="audio/mp3">

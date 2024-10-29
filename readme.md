@@ -78,7 +78,7 @@ Theme | Based on
 
 ## ⌨️ Usage
 > [!NOTE]
-> Until a future timepoint, I won't provide a guide on how to use it with Marp CLI, as I expect CLI users to be technical enough to know how to do this. You can read the [Marp CLI documentation here](https://github.com/marp-team/marp-cli).
+> Until a future timepoint, I won't provide a guide on how to use it with Marp CLI, as I expect CLI users to be technical enough to know how to do this. You can read the [Marp CLI documentation here](https://github.com/marp-team/marp-cli), and inspect the [preview creation script](/example/create-previews.sh) for some examples.
 ### 🛠 Prerequisites
 - Git or zip
 - Visual Studio Code
@@ -91,7 +91,7 @@ Theme | Based on
 > For reasons beyond my comprehension, it is necessary to use different notation for ``hsl`` in CSS in the Marp VS code preview as compared to the build version. To mitigate this I have added a ``build-multiplier`` variable to the CSS files. Set this to ``1`` when working in VS code, and ``100`` when exporting (or working in other ways).
 
 #### 📥 In an existing presentation
-1. Download or copy the neobeam.css (or specific theme) file into your project OR use the direct link.
+1. Download or copy the neobeam.css file into your project OR use the direct link. If using specific themes, do remember they are dependent on the base theme.
 2. Add it to your VSCode settings by editing your ``.vscode/settings.json`` file and appending:
 ```json
   //...
@@ -129,7 +129,7 @@ All themes are registered and ready in the template.
 ## 🪄 Features & quirks
 Most things work like you'd expect, but there are some quirks to keep the cogs turning.
 ### Theming
-It is since v0.5 very easy to change the theme. There are now simple variables at the top of each CSS file, where it adjusts the colors and everything else completely automatically. 
+It is since v0.5 very easy to change the theme. There are now simple variables in each CSS file, where it adjusts the colors and everything else completely automatically. 
 
 ### Title slide
 I opted not to always treat the first slide as a title slide, so to declare a slide (any slide actually) a title slide, add the following before the content: ``<!-- _class: title -->``. 
@@ -147,13 +147,9 @@ Heres an example of a title slide. As long as you follow as similar format it sh
 ## Conference/course/e.t.c.
 
 ![logo Logo](path/to/logo)
-
 ```
-### Headings
-~~Instead of defininig a static header, one gets created by the first H1 (single #) in the slide.~~
 
-> [!NOTE]
-> This is currently deprecated, but will come back in some form soon.
+Like other images, the logo can be assigned left side too.
 
 ### Footers
 Every page has a footer. It's made from the footer content defined in the beginning of the presentation markdown, and the sections are split by using ** (to create children objects). The footer is a flex-box and I've made it split itself into three sections. You could likely with some modifications change this fairly easily.

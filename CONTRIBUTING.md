@@ -11,5 +11,7 @@ Feel free to do so.
 - Marp Extension for Visual Studio Code
 
 ### Instructions
-Simply clone the repo, create a branch, and follow the instructions of usage in the [readme](README.md)
+Simply clone or fork the repo, create a branch, and follow the instructions of usage in the [readme](README.md).
+
+To generate new preview images, run the ``create-previews.sh`` script in the [``example``](/example/) folder (do so while in that directory). You may need to ``chmod`` it first.
 

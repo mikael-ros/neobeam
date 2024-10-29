@@ -21,6 +21,8 @@
 /* Defaults */
 /************/
 :root {
+    --build-multiplier: 100; /* Set to 1 when working in vscode, 100 when building */
+    
     /* -- Colors -- */
     /* Primary, and variations */
     --primary:          #4d85d1;
@@ -28,9 +30,8 @@
     --saturation-decreaser: 1;
     --brightness-multiplier: 1;
     --brightness-decreaser: 2;
-    --build-multiplier: 1; /* Set to 1 when working in vscode, 100 when building */
     --color-shift: 30;
-
+    
     --lighter-primary:  hsl(from var(--primary) h calc(s - var(--saturation-decreaser) * var(--build-multiplier) * .2) calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .045));
     --darker-primary:   hsl(from var(--primary) h calc(s + var(--saturation-multiplier) * var(--build-multiplier) * .01) calc(l - var(--brightness-decreaser) * var(--build-multiplier) * .075));
     --darkest-primary:  hsl(from var(--primary) h calc(s + var(--saturation-multiplier) * var(--build-multiplier) * .01) calc(l - var(--brightness-decreaser) * var(--build-multiplier) * .15));
@@ -39,10 +40,10 @@
     --text-color-lighter:   hsl(from var(--text-color) h s calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .1));
     --text-color-lightest:  hsl(from var(--text-color) h s calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .2));
 
-    --text-color-negative:          hsl(from var(--primary) h calc(s - var(--saturation-decreaser) * var(--build-multiplier) * .1) calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .5));
+    --text-color-negative:          hsl(from var(--primary) h calc(s - var(--saturation-decreaser) * var(--build-multiplier) * .1) calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .3));
     --text-color-negative-lightest: hsl(from var(--text-color-negative) h s calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .1));
-    --text-color-negative-lighter:  hsl(from var(--text-color-negative) h s calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .15));
-    --text-color-negative-darker:   hsl(from var(--text-color-negative) h s calc(l - var(--brightness-decreaser) * var(--build-multiplier) * .2));
+    --text-color-negative-lighter:  hsl(from var(--text-color-negative) h s calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .2));
+    --text-color-negative-darker:   hsl(from var(--text-color-negative) h s calc(l - var(--brightness-decreaser) * var(--build-multiplier) * .1));
 
     --highlight-color-one:      var(--primary);
     --highlight-color-two:      hsl(from var(--primary) calc(h + var(--color-shift)) calc(s - var(--saturation-decreaser) * var(--build-multiplier) * .15) calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .1));
@@ -349,9 +350,9 @@ blockquote:has(> h4) {
     padding: 0;
     border: none; /* Remove line */
     --block-fg-color: var(--highlight-color-one);
-    --block-bg-color: hsl(from var(--block-fg-color) h calc(s - var(--saturation-decreaser) * var(--build-multiplier) * .1) calc(l - var(--brightness-decreaser) * var(--build-multiplier) * .1));
+    --block-bg-color: hsl(from var(--block-fg-color) h calc(s - var(--saturation-decreaser) * var(--build-multiplier) * .1) calc(l - var(--brightness-decreaser) * var(--build-multiplier) * .075));
 
-    color: var(--text-color-negative);
+    color: var(--text-color-negative-lightest);
 }
 
 blockquote:has(> h4) > * {
