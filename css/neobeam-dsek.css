@@ -19,6 +19,5 @@
     --saturation-decreaser: .5;
     --brightness-multiplier: .5;
     --brightness-decreaser: .75;
-    --build-multiplier: 1; /* Set to 1 when working in vscode, 100 when building */
     --color-shift: 180;
 }

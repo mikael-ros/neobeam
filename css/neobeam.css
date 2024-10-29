@@ -28,7 +28,7 @@
     --saturation-decreaser: 1;
     --brightness-multiplier: 1;
     --brightness-decreaser: 2;
-    --build-multiplier: 100; /* Set to 1 when working in vscode, 100 when building */
+    --build-multiplier: 1; /* Set to 1 when working in vscode, 100 when building */
     --color-shift: 30;
 
     --lighter-primary:  hsl(from var(--primary) h calc(s - var(--saturation-decreaser) * var(--build-multiplier) * .2) calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .045));
