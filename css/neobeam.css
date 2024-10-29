@@ -239,7 +239,7 @@ footer > *:last-child {
     /* Leave space for pagination number */
     --pagination-space: calc(.5*var(--footer-height) + 2 * var(--text-padding));
     margin-left: calc(-2 * var(--radius-space) - var(--pagination-space));
-    padding-left: calc(var(--text-padding) + var(--radius-space) - var(--pagination-space));
+    padding-left: calc(var(--text-padding) + var(--radius-space));
     padding-right: var(--pagination-space);
 }
 
