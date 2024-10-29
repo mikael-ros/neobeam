@@ -21,7 +21,7 @@
 /* Defaults */
 /************/
 :root {
-    --build-multiplier: 1; /* Set to 1 when working in vscode, 100 when building */
+    --build-multiplier: 100; /* Set to 1 when working in vscode, 100 when building */
     
     /* -- Colors -- */
     /* Primary, and variations */
