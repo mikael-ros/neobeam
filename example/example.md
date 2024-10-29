@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: neobeam-dsek
+theme: neobeam
 paginate: true
 math: katex
 footer: '**mikael-ros**

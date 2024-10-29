@@ -11,7 +11,7 @@ for theme in ../css/*.css; do
     echo "Creating previews for $themename..."
 
     # Generate slides (PNG) with Marp, suppressing output
-    marp --images png example.md --theme $theme --theme-set ../css/neobeam.css -- --allow-local-files > /dev/null 2>&1
+    marp --images png example.md --theme $theme --theme-set ../css/neobeam.css --allow-local-files
 
     # Make a directory for the theme's previews (if it doesn't already exist)
     mkdir -p "../previews/$themename"
@@ -24,5 +24,5 @@ for theme in ../css/*.css; do
     done
 
     # Generate HTML slides, suppressing output
-    marp example.md -o ../previews/$themename/$themename.html --theme $theme --theme-set ../css/neobeam.css -- > /dev/null 2>&1
+    marp example.md -o ../previews/$themename/$themename.html --theme $theme --theme-set ../css/neobeam.css 
 done
