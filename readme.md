@@ -10,7 +10,7 @@ Find the classic beamer outdated? Are your students losing focus due to it? 💤
 I'm not sure how to solve the last one, but this theme is my attempt to address the first issue: too many a new presentation look decades old due to the classic look of beamer.
 
 > [!NOTE]
-> _[Marp](https://marp.app/) is a presentation framework that allows users to create presentations with Markdown and CSS. While this theme relies on Marp to be used, it is not directly affiliated with or sponsored by it._
+> _[Marp](https://marp.app/) is a presentation framework that allows users to create presentations with Markdown and CSS._
 >
 > Inspired by, but not affiliated with or sourced from, the Marp [beam theme made by rnd195](https://github.com/rnd195/my-marp-themes). As mentioned, I have not used any of their code to create this theme.
 
@@ -22,7 +22,7 @@ I'm not sure how to solve the last one, but this theme is my attempt to address 
 > **None of the following is legal advice. Consult a professional**.
 > This theme uses free-to-use fonts, and should be okay for personal use, but do conduct your own research before hosting any large presentation with it.
 >
-> Consider the [license](LICENSE) of this project as well, and Marp itself.
+> Consider the [license](LICENSE) of this project as well, and Marp's license itself.
 >
 > All fonts used in the theme by default are imported from Google Fonts. Consider the privacy aspects of this yourself and choose wheter you want local installs of them or not. This was a choice made to enable direct linking of the theme to work.
 
@@ -62,10 +62,10 @@ Images            |  Tables
 Theme | Based on
 :----:|:--------:
 [neobeam](https://mikael-ros.github.io/neobeam/neobeam)|
-[neobeam-beamer](https://mikael-ros.github.io/neobeam/neobeam-beamer) | beamer color scheme
-[neobeam-dsek](https://mikael-ros.github.io/neobeam/neobeam-dsek) | [LTH D-sektionen design profile](https://www.dsek.se/en/documents/governing)
-[neobeam-csek](https://mikael-ros.github.io/neobeam/neobeam-csek) | [LTH C-sektionen design profile](https://www.dsek.se/en/documents/governing)
-[neobeam-lund](https://mikael-ros.github.io/neobeam/neobeam-lund) | [Lund University design profile](https://www.medarbetarwebben.lu.se/stod-och-verktyg/kommunikation-och-grafisk-profil/grafisk-profil-och-logotyp)
+[neobeam-beamer](https://mikael-ros.github.io/neobeam/beamer) | beamer color scheme
+[neobeam-dsek](https://mikael-ros.github.io/neobeam/dsek) | [LTH D-sektionen design profile](https://www.dsek.se/en/documents/governing)
+[neobeam-csek](https://mikael-ros.github.io/neobeam/csek) | [LTH C-sektionen design profile](https://www.dsek.se/en/documents/governing)
+[neobeam-lund](https://mikael-ros.github.io/neobeam/lund) | [Lund University design profile](https://www.medarbetarwebben.lu.se/stod-och-verktyg/kommunikation-och-grafisk-profil/grafisk-profil-och-logotyp)
 
 #### Some static previews
 > More are available in the repo!
@@ -78,7 +78,7 @@ Theme | Based on
 
 ## ⌨️ Usage
 > [!NOTE]
-> Until a future timepoint, I won't provide a guide on how to use it with Marp CLI, as I expect CLI users to be technical enough to know how to do this.
+> Until a future timepoint, I won't provide a guide on how to use it with Marp CLI, as I expect CLI users to be technical enough to know how to do this. You can read the [Marp CLI documentation here](https://github.com/marp-team/marp-cli).
 ### 🛠 Prerequisites
 - Git or zip
 - Visual Studio Code
