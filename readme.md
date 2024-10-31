@@ -1,6 +1,7 @@
 <p align="center">
     <img style="background-color: transparent" src="assets/neobeam.svg">
 </p>
+[![Mentioned in Awesome Marp](https://awesome.re/mentioned-badge.svg)](https://github.com/marp-team/awesome-marp)
 
 ## ✨️A modern take on LaTeX beamer 
 ### A Marp theme
