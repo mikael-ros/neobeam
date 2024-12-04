@@ -21,7 +21,7 @@
 /* Defaults */
 /************/
 :root {
-    --build-multiplier: 100; /* Set to 1 when working in vscode, 100 when building */
+    --build-multiplier: 100; /* Might need to be set to 1 in some cases to fix color issues */
     
     /* -- Colors -- */
     /* Primary, and variations */
@@ -187,7 +187,7 @@ section::after {
 
     height: var(--footer-height);
     line-height: var(--footer-height);
-    width: var(--footer-height);
+    width: calc(2*var(--footer-height)); /* Give more space as necessary */
     color: var(--text-color-negative);
     font-size: calc(0.65 * var(--font-size)); /* For some reason simply writing 0.65rem won't do here */
 
@@ -244,7 +244,7 @@ footer > *:last-child {
     z-index: 1;
 
     /* Leave space for pagination number */
-    --pagination-space: calc(var(--footer-height) + 2 * var(--text-padding));
+    --pagination-space: calc(2*var(--footer-height) + 2 * var(--text-padding));
     margin-left: calc(-2 * var(--radius-space) - var(--pagination-space));
     padding-left: calc(var(--text-padding) + var(--radius-space));
     padding-right: var(--pagination-space);
