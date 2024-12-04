@@ -90,7 +90,7 @@ Theme | Based on
 > This theme by default uses the fonts Roboto, Roboto Mono (for code) and Noto Sans Math (for math). These are imported in the CSS file, but you can aquire them yourself too, or change them out. In the LTH C-sektionen and D-sektionen themes, Roboto is switched out for Helvetica.
 
 > [!WARNING]
-> For reasons beyond my comprehension, it is necessary to use different notation for ``hsl`` in CSS in the Marp VS code preview as compared to the build version. To mitigate this I have added a ``build-multiplier`` variable to the CSS files. Set this to ``1`` when working in VS code, and ``100`` when exporting (or working in other ways).
+> For reasons beyond my comprehension, it is necessary to use different notation for ``hsl`` in CSS in the Marp VS code preview as compared to the build version sometimes. To mitigate this I have added a ``build-multiplier`` variable to the CSS files. Set this to ``1`` when necessary, otherwise ``100``.
 
 #### 📥 In an existing presentation
 1. Download or copy the neobeam.css file into your project OR use the direct link. If using specific themes, do remember they are dependent on the base theme.
@@ -120,6 +120,8 @@ footer: '**Author**
 ```
 The theme names are written as presented in the table in the previews section.
 4. Change ``build-multiplier`` to ``1``, if the preview looks wrong. Do not forget to change it back before you build.
+
+> If you are, against all odds, using more than 1000 slides, and the pagination wraps, go into [``neobeam.css``](css/neobeam.css) and modify ``section::after``'s ``width``, and correspondingly the ``--pagination-space`` in ``footer > *:last-child``.
 
 #### ✨️ As a template
 Simply clone or fork this repo or download the release. If you wish, you can delete the previews folder. 
