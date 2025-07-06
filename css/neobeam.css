@@ -528,11 +528,6 @@ audio {
     margin: var(--text-padding) 0;
 }
 
-.katex {
-    font-family: var(--math-font);
-    font-size: 0.9em;
-}
-
-.katex p{
-    margin-left: initial;
+.katex span {
+    /*font: normal 1em var(--math-font); currently unsupported*/
 }
