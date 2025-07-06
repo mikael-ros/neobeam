@@ -5,7 +5,7 @@ paginate: true
 math: katex
 footer: '**mikael-ros**
          **A modern take on the LaTeX beamer theme**
-         **Version 0.7, 2024**'
+         **Version 0.8, 2025**'
 ---
 <!-- _class: title -->
 # A modern take on the LaTeX beamer theme
@@ -15,7 +15,7 @@ footer: '**mikael-ros**
 > ### Faculty of GitHub
 > University of Marp
 
-## Version 0.7, 2024
+## Version 0.8, 2025
 
 ![logo GitHub Logo](../assets/github-mark.svg)
 

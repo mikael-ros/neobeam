@@ -68,13 +68,14 @@ Theme | Based on
 [neobeam-dsek](https://mikael-ros.github.io/neobeam/dsek) | [LTH D-sektionen design profile](https://www.dsek.se/en/documents/governing)
 [neobeam-csek](https://mikael-ros.github.io/neobeam/csek) | [LTH C-sektionen design profile](https://www.dsek.se/en/documents/governing)
 [neobeam-lund](https://mikael-ros.github.io/neobeam/lund) | [Lund University design profile](https://www.medarbetarwebben.lu.se/stod-och-verktyg/kommunikation-och-grafisk-profil/grafisk-profil-och-logotyp)
+[neobeam-embracket](https://mikael-ros.github.io/neobeam/embracket) | [Embracket design language](https://www.embracket.com)
 
 #### Some static previews
 > More are available in the repo!
 
- Default | beamer theme | LTH D-sektionen | LTH C-sektionen | LTH/Lund University 
-:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
- ![Neobeam](previews/neobeam/neobeam-0.png) | ![Beamer](previews/beamer/beamer-0.png) | ![D-sek](previews/dsek/dsek-0.png) | ![D-sek](previews/csek/csek-0.png) | ![Lund](previews/lund/lund-0.png)
+ Default | beamer | LTH D-sektionen | LTH C-sektionen | LTH/Lund University | Embracket
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+ ![Neobeam](previews/neobeam/neobeam-0.png) | ![Beamer](previews/beamer/beamer-0.png) | ![D-sek](previews/dsek/dsek-0.png) | ![D-sek](previews/csek/csek-0.png) | ![Lund](previews/lund/lund-0.png) | ![Embracket](previews/embracket/embracket-0.png)
 
 ---
 

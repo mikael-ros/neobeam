@@ -4,9 +4,10 @@
         "/css/neobeam-beamer.css",
         "/css/neobeam-dsek.css",
         "/css/neobeam-csek.css",
-        "/css/neobeam-lund.css"
+        "/css/neobeam-lund.css",
+        "/css/neobeam-embracket.css"
     ],
-    "markdown.marp.enableHtml": false,
+    "markdown.marp.html": false,
     "markdown.marp.exportType": "html",
     "markdown.marp.mathTypesetting": "katex"
 }

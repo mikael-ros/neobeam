@@ -1,0 +1,30 @@
+/*!
+ * Neobeam - A modern take on LaTeX beamer | Embracket version
+ *
+ * @theme neobeam-embracket
+ * @author Embracket / mikael-ros
+ *
+ * @auto-scaling true
+ * @size 16:9 1920px 1090px
+ * @size 4:3 960px 720px
+ */
+
+ @import "neobeam";
+ @import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap');
+
+ :root {
+    /* -- Colors -- */
+    /* Primary, and variations */
+    --primary:          #6ba7d8;
+    --saturation-multiplier: .6;
+    --saturation-decreaser: .25;
+    --brightness-multiplier: 1.4;
+    --brightness-decreaser: 1;
+    --color-shift: 120;
+
+    --default-font: "Spline Sans Mono";
+    --monospace-font: "Spline Sans Mono";
+    --math-font: "Spline Sans Mono";
+
+    --font-size: 26px;
+ }
