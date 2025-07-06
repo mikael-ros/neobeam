@@ -178,7 +178,7 @@ There is light HTML support, including the elements:
 - ``<audio>`` (audio)
 - ``<abbr>`` (abbreviations).
 
-To enable HTML support add or modify the line ``"markdown.marp.enableHtml": true`` in ``.vscode/settings.json``. 
+To enable HTML support add or modify the line ``"markdown.marp.html": true`` in ``.vscode/settings.json`` (or globally). 
 
 > [!WARNING] 
 > Considering the [security issues mentioned in Marps documentation](https://github.com/marp-team/marp-vscode#enable-html-in-marp-markdown-%EF%B8%8F), this is disabled by default, even in the template. You may need to restart Visual Studio Code after changing the setting. You will need to export in HTML for interactive elements to function.

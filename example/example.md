@@ -56,7 +56,6 @@ We can define ``variables`` inline, and code in blocks (with syntax highlighting
 > $$
 ||\overline v|| = \sqrt{a^2 + b^2} \\
 \text{where } \overline v = (a,b)
-$$
 ## Definitions
 Blockquotes with level 4 (####) headings inside get translated to definitions like:
 

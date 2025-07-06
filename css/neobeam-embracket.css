@@ -16,11 +16,11 @@
     /* -- Colors -- */
     /* Primary, and variations */
     --primary:          #6ba7d8;
-    --saturation-multiplier: .6;
-    --saturation-decreaser: .25;
-    --brightness-multiplier: 1.4;
-    --brightness-decreaser: 1;
-    --color-shift: 120;
+    --saturation-multiplier: .5;
+    --saturation-decreaser: .3;
+    --brightness-multiplier: 1;
+    --brightness-decreaser: 1.2;
+    --color-shift: 70;
 
     --default-font: "Spline Sans Mono";
     --monospace-font: "Spline Sans Mono";
