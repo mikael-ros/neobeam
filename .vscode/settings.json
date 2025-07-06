@@ -5,7 +5,9 @@
         "/css/neobeam-dsek.css",
         "/css/neobeam-csek.css",
         "/css/neobeam-lund.css",
-        "/css/neobeam-embracket.css"
+        "/css/neobeam-embracket.css",
+        "/css/neobeam-neonbeam.css",
+        "/css/neobeam-oldenbeam.css"
     ],
     "markdown.marp.html": false,
     "markdown.marp.exportType": "html",

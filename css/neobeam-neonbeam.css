@@ -1,0 +1,32 @@
+/*!
+ * Neobeam - A modern take on LaTeX beamer | Neonbeam version
+ *
+ * @theme neobeam-neonbeam
+ * @author Embracket / mikael-ros
+ *
+ * @auto-scaling true
+ * @size 16:9 1920px 1090px
+ * @size 4:3 960px 720px
+ */
+
+ @import "neobeam";
+ @import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+ :root {
+    /* -- Colors -- */
+    /* Primary, and variations */
+    --primary:          #FF5C00;
+    --saturation-multiplier: .4;
+    --saturation-decreaser: .6;
+    --brightness-multiplier: 1.5;
+    --brightness-decreaser: 1.1;
+    --color-shift: 160;
+
+    --default-font: "Quantico";
+    --monospace-font: "Quantico";
+    --math-font: "Quantico";
+
+    --font-size: 28px;
+
+    --border-radius-default: 1.1rem;
+ }

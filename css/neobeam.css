@@ -154,7 +154,7 @@ section header {
     top: 0;
     
     /* Compensate for radius */
-    padding: var(--_radius);
+    padding: max(0.5rem, var(--_radius));
     --height: calc(var(--header-height) + .5*var(--_radius));
     --radius: var(--border-radius-default);
 
@@ -410,6 +410,7 @@ table {
     border: solid .1em var(--text-color-negative-darker);
     padding: 0; /* No internal padding. Inhereted from the settings higher up */
     border-spacing: 0; /* Remove weird table spacing */
+    min-width: 0;
 }
 
 table tr td, table th {

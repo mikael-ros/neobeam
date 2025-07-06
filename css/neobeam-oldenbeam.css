@@ -1,0 +1,36 @@
+/*!
+ * Neobeam - A modern take on LaTeX beamer | Oldenbeam theme
+ *
+ * @theme neobeam-oldenbeam
+ * @author Embracket / mikael-ros
+ *
+ * @auto-scaling true
+ * @size 16:9 1920px 1090px
+ * @size 4:3 960px 720px
+ */
+
+ @import "neobeam";
+ @import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
+ 
+ :root {
+    /* -- Colors -- */
+    /* Primary, and variations */
+    --primary:          #41424C;
+    --saturation-multiplier: .4;
+    --saturation-decreaser: .6;
+    --brightness-multiplier: 1.5;
+    --brightness-decreaser: 1.1;
+    --color-shift: 160;
+
+    --default-font: "Hedvig Letters Serif";
+    --monospace-font: "Hedvig Letters Serif";
+    --math-font: "Hedvig Letters Serif";
+
+    --font-size: 28px;
+
+    --border-radius-default: 0.1rem;
+ }
+
+ footer > * {
+   --radius: 0em;
+ }

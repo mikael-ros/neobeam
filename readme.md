@@ -69,13 +69,15 @@ Theme | Based on
 [neobeam-csek](https://mikael-ros.github.io/neobeam/csek) | [LTH C-sektionen design profile](https://www.dsek.se/en/documents/governing)
 [neobeam-lund](https://mikael-ros.github.io/neobeam/lund) | [Lund University design profile](https://www.medarbetarwebben.lu.se/stod-och-verktyg/kommunikation-och-grafisk-profil/grafisk-profil-och-logotyp)
 [neobeam-embracket](https://mikael-ros.github.io/neobeam/embracket) | [Embracket design language](https://www.embracket.com)
+[neobeam-neonbeam](https://mikael-ros.github.io/neobeam/neonbeam) | Inspired by neon colors
+[neobeam-oldenbeam](https://mikael-ros.github.io/neobeam/oldenbeam) | Inspired by coal?
 
 #### Some static previews
 > More are available in the repo!
 
- Default | beamer | LTH D-sektionen | LTH C-sektionen | LTH/Lund University | Embracket
-:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
- ![Neobeam](previews/neobeam/neobeam-0.png) | ![Beamer](previews/beamer/beamer-0.png) | ![D-sek](previews/dsek/dsek-0.png) | ![D-sek](previews/csek/csek-0.png) | ![Lund](previews/lund/lund-0.png) | ![Embracket](previews/embracket/embracket-0.png)
+ Default | beamer | LTH D-sektionen | LTH C-sektionen | LTH/Lund University | Embracket | Neonbeam | Oldenbeam
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
+ ![Neobeam](previews/neobeam/neobeam-0.png) | ![Beamer](previews/beamer/beamer-0.png) | ![D-sek](previews/dsek/dsek-0.png) | ![D-sek](previews/csek/csek-0.png) | ![Lund](previews/lund/lund-0.png) | ![Embracket](previews/embracket/embracket-0.png) | ![Neonbeam](previews/neonbeam/neonbeam-0.png) | ![Oldenbeam](previews/oldenbeam/oldenbeam-0.png)
 
 ---
 
@@ -88,7 +90,7 @@ Theme | Based on
 - Marp Extension for Visual Studio Code
 
 > [!TIP]
-> This theme by default uses the fonts Roboto, Roboto Mono (for code) and Noto Sans Math (for math). These are imported in the CSS file, but you can aquire them yourself too, or change them out. In the LTH C-sektionen and D-sektionen themes, Roboto is switched out for Helvetica.
+> This theme by default uses the fonts Roboto, Roboto Mono (for code) and Noto Sans Math (for math), as well as some others depending on the version of the theme. These are imported in the CSS file, but you can aquire them yourself too, or change them out. In the LTH C-sektionen and D-sektionen themes, Roboto is switched out for Helvetica.
 
 > [!WARNING]
 > For reasons beyond my comprehension, it is necessary to use different notation for ``hsl`` in CSS in the Marp VS code preview as compared to the build version sometimes. To mitigate this I have added a ``build-multiplier`` variable to the CSS files. Set this to ``1`` when necessary, otherwise ``100``.
