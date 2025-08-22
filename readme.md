@@ -75,9 +75,17 @@ Theme | Based on
 #### Some static previews
 > More are available in the repo!
 
- Default | beamer | LTH D-sektionen | LTH C-sektionen | LTH/Lund University | Embracket | Neonbeam | Oldenbeam
-:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
- ![Neobeam](previews/neobeam/neobeam-0.png) | ![Beamer](previews/beamer/beamer-0.png) | ![D-sek](previews/dsek/dsek-0.png) | ![D-sek](previews/csek/csek-0.png) | ![Lund](previews/lund/lund-0.png) | ![Embracket](previews/embracket/embracket-0.png) | ![Neonbeam](previews/neonbeam/neonbeam-0.png) | ![Oldenbeam](previews/oldenbeam/oldenbeam-0.png)
+| Default                                          | beamer                                           | LTH D-sektionen                                  | 
+|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|
+|![Neobeam](previews/neobeam/neobeam-0.png)        |![Beamer](previews/beamer/beamer-0.png)           |![D-sek](previews/dsek/dsek-0.png)                |
+
+| LTH C-sektionen                                  | LTH/Lund University                              | Embracket                                        | 
+|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|
+|![C-sek](previews/csek/csek-0.png)                |![Lund](previews/lund/lund-0.png)                 | ![Embracket](previews/embracket/embracket-0.png) |
+
+| Neonbeam                                         | Oldenbeam                                        |                                                  |
+|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|
+|![Neonbeam](previews/neonbeam/neonbeam-0.png)     |![Oldenbeam](previews/oldenbeam/oldenbeam-0.png)  |                                                  |
 
 ---
 
