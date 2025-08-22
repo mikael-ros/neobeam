@@ -71,6 +71,7 @@ Theme | Based on
 [neobeam-embracket](https://mikael-ros.github.io/neobeam/embracket) | [Embracket design language](https://www.embracket.com)
 [neobeam-neonbeam](https://mikael-ros.github.io/neobeam/neonbeam) | Inspired by neon colors
 [neobeam-oldenbeam](https://mikael-ros.github.io/neobeam/oldenbeam) | Inspired by coal?
+[neobeam-ecobeam](https://mikael-ros.github.io/neobeam/ecobeam) | Inspired by nature?
 
 #### Some static previews
 > More are available in the repo!
@@ -81,11 +82,11 @@ Theme | Based on
 
 | LTH C-sektionen                                  | LTH/Lund University                              | Embracket                                        | 
 |:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|
-|![C-sek](previews/csek/csek-0.png)                |![Lund](previews/lund/lund-0.png)                 | ![Embracket](previews/embracket/embracket-0.png) |
+|![C-sek](previews/csek/csek-0.png)                |![Lund](previews/lund/lund-0.png)                 |![Embracket](previews/embracket/embracket-0.png)  |
 
-| Neonbeam                                         | Oldenbeam                                        |                                                  |
+| Neonbeam                                         | Oldenbeam                                        | Ecobeam                                          |
 |:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|
-|![Neonbeam](previews/neonbeam/neonbeam-0.png)     |![Oldenbeam](previews/oldenbeam/oldenbeam-0.png)  |                                                  |
+|![Neonbeam](previews/neonbeam/neonbeam-0.png)     |![Oldenbeam](previews/oldenbeam/oldenbeam-0.png)  |![Ecobeam](previews/ecobeam/ecobeam-0.png)        |                                                 |
 
 ---
 

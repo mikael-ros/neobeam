@@ -7,7 +7,8 @@
         "/css/neobeam-lund.css",
         "/css/neobeam-embracket.css",
         "/css/neobeam-neonbeam.css",
-        "/css/neobeam-oldenbeam.css"
+        "/css/neobeam-oldenbeam.css",
+        "/css/neobeam-ecobeam.css",
     ],
     "markdown.marp.html": false,
     "markdown.marp.exportType": "html",
