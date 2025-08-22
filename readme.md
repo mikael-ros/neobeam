@@ -147,6 +147,58 @@ Most things work like you'd expect, but there are some quirks to keep the cogs t
 ### Theming
 It is since v0.5 very easy to change the theme. There are now simple variables in each CSS file, where it adjusts the colors and everything else completely automatically. 
 
+#### Explanation of variables
+You can use any of these variables to easily change most things about the theme. The direct variables are meant for easy tweaking, whereas the dependent variables are not necessarily meant to be referenced. Deeper customization can be achieved by modifying the CSS itself.
+##### Direct variables
+These variables are meant to be set by the user, and have snowball effects.
+
+| Variable name                  | Purpose                                                                                                                   | What does it affect?          |
+|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|-------------------------------|
+|``build-multiplier``            | Changes the overall multiplication of all color values. Used when there are inconsistencies between the preview and build.| Changes all colored elements. |
+|``saturation-multiplier``       | Multiplies all cases where saturation is added.                                                                           | Affects ``darker-primary`` and ``darkest-primary``. See the variables individual descriptions in the next section on "dependent variables". |
+|``desaturation-multiplier``     | Multiplies all cases where saturation is removed.                                                                         | Affects ``lighter-primary``, ``text-color``, ``text-color-negative``, ``highlight-color-two``, ``highlight-color-three``, and the background color for the definition blocks. ee their individual descriptions in the next section.|
+|``brightness-multiplier``       | Multiplies all cases where brightness is added.                                                                           | Affects ``lighter-primary``, ``text-color-lighter``, ``text-color-lightest``, ``text-color-negative``, ``text-color-negative-lighter``, ``text-color-negative-lightest``, ``highlight-color-two``, ``highlight-color-three``, and the highlight brightness of ``mark`` elements.  See the variables individual descriptions in the next section on "dependent variables". |
+|``darkness-multiplier``         | Multiplies all cases where brightness is removed.                                                                         | Affects ``darker-primary``, ``darkest-primary``, ``text-color``, ``text-color-negative-darker``, and the background color of the definition blocks.  See the variables individual descriptions in the next section on "dependent variables". |
+|``color-shift-degrees``         | Shifts the colors for sequenced definition blocks by the specified amount of degrees times some factor.                   | Affects ``highlight-color-two`` and ``highlight-color-three``. See the variables individual descriptions in the next section on "dependent variables".|
+|``default-font``                | Sets the font for the majority of the text.                                                                               | Affects the root ``font-family``, e.g. the font for the document as a whole. |
+|``monospace-font``              | Sets the monospace font, used in code blocks, e.t.c.                                                                      | Affects the font used for ``pre`` (code blocks), ``code`` (inline code snippets), and ``samp`` (sample code snippets). |                                                                  
+|``math-font``                   | Sets the math font, used in math blocks.                                                                                  | ~~Affects the font used for ``.katex`` (math blocks).~~ **note; currently not working** |
+|``font-size``                   | Sets the font size for the document. The variable is referenced in several locations.                                     | Used to set the root ``font-size``, and also affects where the pagination index is placed. |
+|``primary``                     | Sets the primary color for the document.                                                                                  | Affects ``lighter-primary``, ``darker-primary``, ``darkest-primary``, ``text-color``, ``text-color-negative``, ``highlight-color-one``, ``highlight-color-two``, ``highlight-color-three``, the color of ``section header``, the color of ``footer``, the color of ``footer``s last child, and the title page header's color. See the variables individual descriptions in the next section on "dependent variables".| 
+|``definition-height``           | Sets the height of definition blocks.                                                                                     | Affects definition block heights. | 
+|``header-height``               | Sets the height of the headers.                                                                                           | Affects ``footer-height``, ``top-margin``, ``left-right-margin``, and header heights. See the variables individual descriptions in the next section on "dependent variables". |
+|``text-padding``                | Sets the text padding within various elements.                                                                            | Affects the text padding around all elements that contain text, essentially (too many to list). |
+|``border-radius-default``       | Sets the border radius of various elements.                                                                               | Affects ``border-radius-softer``, ``border-radius-harder``, and all rounded elements (too many to list). See the variables individual descriptions in the next section on "dependent variables". |
+
+##### Dependent variables
+These variables set themselves automatically through using the previously described direct variables, but you can also edit them manually.
+
+| Variable name                  | Purpose                                                                                                                   | What does it change?          |
+|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|-------------------------------|
+|``lighter-primary``             |
+|``darker-primary``              |
+|``darkest-primary``             |
+|``text-color``                  |
+|``text-color-lighter``          |
+|``text-color-lightest``         |
+|``text-color-negative``         |
+|``text-color-negative-lighter`` |
+|``text-color-negative-lightest``|
+|``text-color-negative-darker``  |
+|``highlight-color-one``         |
+|``highlight-color-two``         |
+|``highlight-color-three``       |
+|``footer-height``               |
+|``top-margin``                  |
+|``left-right-margin``           |
+|``bottom-margin``               |
+|``margin``                      |
+|``border-radius-softer``        |
+|``border-radius-harder``        |
+|``background-color``            |
+
+
+
 ### Title slide
 I opted not to always treat the first slide as a title slide, so to declare a slide (any slide actually) a title slide, add the following before the content: ``<!-- _class: title -->``. 
 

@@ -16,8 +16,8 @@
     /* Primary, and variations */
     --primary:          #3333b2;
     --saturation-multiplier: .6;
-    --saturation-decreaser: .25;
+    --desaturation-multiplier: .25;
     --brightness-multiplier: 1.4;
-    --brightness-decreaser: 1;
-    --color-shift: 120;
+    --darkness-multiplier: 1;
+    --color-shift-degrees: 120;
 }
