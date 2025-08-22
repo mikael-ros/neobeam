@@ -16,10 +16,10 @@
     /* Primary, and variations */
     --primary:          #9966CC;
     --saturation-multiplier: 2;
-    --saturation-decreaser: .5;
+    --desaturation-multiplier: .5;
     --brightness-multiplier: 1;
-    --brightness-decreaser: 1.25;
-    --color-shift: 50;
+    --darkness-multiplier: 1.25;
+    --color-shift-degrees: 50;
 
     --default-font: "Helvetica";
     --monospace-font: "Roboto Mono";

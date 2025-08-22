@@ -17,10 +17,10 @@
     /* Primary, and variations */
     --primary:          #6ba7d8;
     --saturation-multiplier: .5;
-    --saturation-decreaser: .3;
+    --desaturation-multiplier: .3;
     --brightness-multiplier: 1;
-    --brightness-decreaser: 1.2;
-    --color-shift: 70;
+    --darkness-multiplier: 1.2;
+    --color-shift-degrees: 70;
 
     --default-font: "Spline Sans Mono";
     --monospace-font: "Spline Sans Mono";

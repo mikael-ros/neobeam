@@ -17,10 +17,10 @@
     /* Primary, and variations */
     --primary:          #41424C;
     --saturation-multiplier: .4;
-    --saturation-decreaser: .6;
+    --desaturation-multiplier: .6;
     --brightness-multiplier: 1.5;
-    --brightness-decreaser: 1.1;
-    --color-shift: 160;
+    --darkness-multiplier: 1.1;
+    --color-shift-degrees: 160;
 
     --default-font: "Hedvig Letters Serif";
     --monospace-font: "Hedvig Letters Serif";
