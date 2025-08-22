@@ -145,7 +145,7 @@ All themes are registered and ready in the template.
 ## 🪄 Features & quirks
 Most things work like you'd expect, but there are some quirks to keep the cogs turning.
 ### Theming
-It is since v0.5 very easy to change the theme. There are now simple variables in each CSS file, where it adjusts the colors and everything else completely automatically. 
+This theme has some variables for easier tweaking, aiding inexperienced users and power-users alike. 
 
 #### Explanation of variables
 You can use any of these variables to easily change most things about the theme. The direct variables are meant for easy tweaking, whereas the dependent variables are not necessarily meant to be referenced. Deeper customization can be achieved by modifying the CSS itself.
