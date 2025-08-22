@@ -133,7 +133,7 @@ footer: '**Author**
 The theme names are written as presented in the table in the previews section.
 4. Change ``build-multiplier`` to ``1``, if the preview looks wrong. Do not forget to change it back before you build.
 
-> If you are, against all odds, using more than 1000 slides, and the pagination wraps, go into [``neobeam.css``](css/neobeam.css) and modify ``section::after``'s ``width``, and correspondingly the ``--pagination-space`` in ``footer > *:last-child``.
+> If you are, against all odds, using more than 1000 slides, and the pagination wraps, go into [``neobeam.css``](css/neobeam.css) and modify ``section::after``'s ``width``, and correspondingly the ``--pagination-space`` in ``footer > *:last-child``.
 
 #### ✨️ As a template
 Simply clone or fork this repo or download the release. If you wish, you can delete the previews folder. 
@@ -175,27 +175,27 @@ These variables set themselves automatically through using the previously descri
 
 | Variable name                  | Purpose                                                                                                                   | What does it change?          |
 |--------------------------------|---------------------------------------------------------------------------------------------------------------------------|-------------------------------|
-|``lighter-primary``             |
-|``darker-primary``              |
-|``darkest-primary``             |
-|``text-color``                  |
-|``text-color-lighter``          |
-|``text-color-lightest``         |
-|``text-color-negative``         |
-|``text-color-negative-lighter`` |
-|``text-color-negative-lightest``|
-|``text-color-negative-darker``  |
-|``highlight-color-one``         |
-|``highlight-color-two``         |
-|``highlight-color-three``       |
-|``footer-height``               |
-|``top-margin``                  |
-|``left-right-margin``           |
-|``bottom-margin``               |
-|``margin``                      |
-|``border-radius-softer``        |
-|``border-radius-harder``        |
-|``background-color``            |
+|``lighter-primary``             | Sets the lighter version of the primary color.                                                                            | The color of ``th`` (table headers). |
+|``darker-primary``              | Sets the darker version of the primary color.                                                                             | The color of the middle portion of the footer. |
+|``darkest-primary``             | Sets an even darker version of the primary color.                                                                         | The color of the first portion of the footer. |
+|``text-color``                  | Sets the primary text color.                                                                                              | The root color of text. Also effects it's own derived variables, seen below. |
+|``text-color-lighter``          | Sets the lighter version of the primary text color.                                                                       | Various text elements. |
+|``text-color-lightest``         | Sets the lightest version of the primary text color.                                                                      | Various text elements. |
+|``text-color-negative``         | Sets the opposite text color, mainly used for when text is set against a poorly contrasted background.                    | Various text elements. |
+|``text-color-negative-lighter`` | Sets the lighter opposite text color.                                                                                     | Various text elements as well as ``background-color``. |
+|``text-color-negative-lightest``| Sets the lightest opposite text color.                                                                                    | Various text elements. |
+|``text-color-negative-darker``  | Sets the darker opposite text color.                                                                                      | Various text elements. |
+|``highlight-color-one``         | Sets the first highlight color.                                                                                           | The first variety of definition block. |
+|``highlight-color-two``         | Sets the second highlight color.                                                                                          | The second variety of definition block in addition to ``mark`` and ``samp``. |
+|``highlight-color-three``       | Sets the third highlight color.                                                                                           | The third variety of definition block. |
+|``footer-height``               | Sets the footer height.                                                                                                   | The height of the footer, the position of the pagination index, ``left-right-margin``, and ``bottom-margin``.
+|``top-margin``                  | Sets the top margin of each slide.                                                                                        | Used in ``margin``. |
+|``left-right-margin``           | Sets the margins on the left and right sides of the slides.                                                               | Used in ``margin``. |
+|``bottom-margin``               | Sets the bottom margin of each slide.                                                                                     | Used in ``margin``. |
+|``margin``                      | Uses the previous three variables to set an overall margin.                                                               | Sets the ``margin`` of ``section``, e.g. the margin of each slide. |
+|``border-radius-softer``        | Sets the radius of "softer" elements.                                                                                     | Nothing, currently. |
+|``border-radius-harder``        | Sets the radius of "harder" elements.                                                                                     | Nothing, currently. |
+|``background-color``            | Sets the background color of all the slides.                                                                              | The ``background-color`` of ``section``, e.g. the color of each slide. |
 
 
 
