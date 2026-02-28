@@ -3,7 +3,7 @@
 </p>
 
 [![Mentioned in Awesome Marp](https://awesome.re/mentioned-badge-flat.svg)](https://github.com/marp-team/awesome-marp)
-![Static Badge](https://img.shields.io/badge/rnd195-Marp%20community%20theme-blue?style=flat&link=https%3A%2F%2Frnd195.github.io%2Fmarp-community-themes%2F)
+[![Static Badge](https://img.shields.io/badge/rnd195-Marp%20community%20theme-blue?style=flat&link=https%3A%2F%2Frnd195.github.io%2Fmarp-community-themes%2F)](https://rnd195.github.io/marp-community-themes/)
 
 
 ## ✨️A modern take on LaTeX beamer 
