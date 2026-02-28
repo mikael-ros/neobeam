@@ -37,7 +37,7 @@
     --monospace-font: "Roboto Mono";
     --math-font: "Noto Sans Math";
 
-    --font-size: 28px;
+    --font-size: 26px;
 
     /* You shouldn't need to modify any below this point, unless you want to */
     --lighter-primary:  hsl(from var(--primary) h calc(s - var(--desaturation-multiplier) * var(--build-multiplier) * .2) calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .045));
@@ -169,12 +169,15 @@ footer {
     /* Position at bottom */
     bottom: 0;
 
+    --radius: calc(var(--height) / 2);
+    --radius-space: calc(.5 * var(--radius));
     --height: var(--footer-height);
     
     font-size: 0.65rem;
+    font-weight: initial !important; /* Important seems necessary, unfortunately, to set the font-weight here */
 
     /* Add left-hand side spacing for basic footer definitions */
-    text-indent: 0.35rem;
+    text-indent: calc(var(--text-padding) + var(--radius-space));
 }
 
 /* The pagination index */
@@ -200,11 +203,10 @@ section::after {
     z-index: 2;
 }
 
-/* * = strong, currently */
+/* All fields, when present */
 footer > * {
     position: relative;
     --_bg-color: var(--bg-color, var(--darker-primary));
-    --radius: calc(var(--height) / 2);
 
     height: 100%;
     line-height: var(--height);
@@ -227,11 +229,9 @@ footer > * {
 
 /* All fields but the first */
 footer > *:nth-child(n+2) {
-    --radius-space: calc(.5 * var(--radius));
     /* Compensate for radius */
     margin-left: calc(-2 * var(--radius-space));
     padding-left: calc(var(--text-padding) + var(--radius-space));
-    
 }
 
 /* First field */

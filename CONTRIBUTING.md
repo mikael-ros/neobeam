@@ -17,5 +17,4 @@ If you do not have either of these, you must have adequate knowledge in how to u
 ### Instructions
 Simply clone or fork the repo, create a branch, and follow the instructions of usage in the [readme](README.md).
 
-To generate new preview images, run the ``create-previews.sh`` script in the [``example``](/example/) folder (do so while in that directory). You may need to ``chmod`` it first.
-
+To generate new preview images, run the ``create-previews.sh`` script in the [``example``](/example/) folder (do so while in that directory). You may need to ``chmod`` it first. You'll need to have marp-cli installed and be running Linux, and have one of these browsers: Firefox, Chrome (Chromium seems to work fine), or Edge. This is a marp-cli requirement.
