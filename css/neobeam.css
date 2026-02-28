@@ -37,7 +37,7 @@
     --monospace-font: "Roboto Mono";
     --math-font: "Noto Sans Math";
 
-    --font-size: 28px;
+    --font-size: 26px;
 
     /* You shouldn't need to modify any below this point, unless you want to */
     --lighter-primary:  hsl(from var(--primary) h calc(s - var(--desaturation-multiplier) * var(--build-multiplier) * .2) calc(l + var(--brightness-multiplier) * var(--build-multiplier) * .045));
