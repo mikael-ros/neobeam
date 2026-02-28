@@ -3,7 +3,9 @@ marp: true
 theme: neobeam
 paginate: true
 math: katex
-footer: 'test'
+footer: '**mikael-ros**
+         **A modern take on the LaTeX beamer theme**
+         **Version 1.0, 2026**'
 ---
 <!-- _class: title -->
 # A modern take on the LaTeX beamer theme
@@ -13,7 +15,7 @@ footer: 'test'
 > ### Faculty of GitHub
 > University of Marp
 
-## Version 1.0, 2025
+## Version 1.0, 2026
 
 ![logo GitHub Logo](../assets/github-mark.svg)
 
