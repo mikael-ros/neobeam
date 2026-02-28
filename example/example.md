@@ -3,9 +3,7 @@ marp: true
 theme: neobeam
 paginate: true
 math: katex
-footer: '**mikael-ros**
-         **A modern take on the LaTeX beamer theme**
-         **Version 1.0, 2025**'
+footer: 'test'
 ---
 <!-- _class: title -->
 # A modern take on the LaTeX beamer theme

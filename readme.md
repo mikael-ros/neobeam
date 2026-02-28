@@ -220,7 +220,9 @@ Heres an example of a title slide. As long as you follow as similar format it sh
 Like other images, the logo can be assigned left side too.
 
 ### Footers
-Every page has a footer. It's made from the footer content defined in the beginning of the presentation markdown, and the sections are split by using ** (to create children objects). The footer is a flex-box and I've made it split itself into three sections. You could likely with some modifications change this fairly easily.
+Every page has a footer. It's made from the footer content defined in the beginning of the presentation markdown, and the sections are split by using any type of modifier, such as ``**`` (to create children objects). The footer is a flex-box and I've made it split itself into three sections. You could likely with some modifications change this fairly easily.
+
+*note, if you still want bold text in the footer, you can double-wrap it, e.g. write ``****some text****``.*
 ### Math
 I've opted to use KaTeX, and have not styled for other options yet.
 ### Definitions
