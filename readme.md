@@ -14,7 +14,7 @@ I'm not sure how to solve the last one, but this theme is my attempt to address 
 > [!NOTE]
 > _[Marp](https://marp.app/) is a presentation framework that allows users to create presentations with Markdown and CSS._
 >
-> Inspired by, but not affiliated with or sourced from, the Marp [beam theme made by rnd195](https://github.com/rnd195/my-marp-themes). As mentioned, I have not used any of their code to create this theme.
+> Inspired by, but not sourced from, the Marp [beam theme made by rnd195](https://github.com/rnd195/my-marp-themes). rnd195 has himself also contributed to this theme.
 
 <a href='https://ko-fi.com/Z8Z212GZR6' target='_blank'><img height='60' style='border:0px;height:60px;' src='https://storage.ko-fi.com/cdn/kofi1.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
@@ -92,9 +92,9 @@ Theme | Based on
 
 ## ⌨️ Usage
 > [!NOTE]
-> Until a future timepoint, I won't provide a guide on how to use it with Marp CLI, as I expect CLI users to be technical enough to know how to do this. You can read the [Marp CLI documentation here](https://github.com/marp-team/marp-cli), and inspect the [preview creation script](/example/create-previews.sh) for some examples.
+> Until a future timepoint, there will not be a guide on how to use it with Marp CLI, as CLI users are expected to be experienced enough to know how to do this. You can read the [Marp CLI documentation here](https://github.com/marp-team/marp-cli), and inspect the [preview creation script](/example/create-previews.sh) for some examples.
 ### 🛠 Prerequisites
-- Git or zip
+- Git or some form of unzip tool
 - Visual Studio Code
 - Marp Extension for Visual Studio Code
 
@@ -102,7 +102,7 @@ Theme | Based on
 > This theme by default uses the fonts Roboto, Roboto Mono (for code) and Noto Sans Math (for math), as well as some others depending on the version of the theme. These are imported in the CSS file, but you can aquire them yourself too, or change them out. In the LTH C-sektionen and D-sektionen themes, Roboto is switched out for Helvetica.
 
 > [!WARNING]
-> For reasons beyond my comprehension, it is necessary to use different notation for ``hsl`` in CSS in the Marp VS code preview as compared to the build version sometimes. To mitigate this I have added a ``build-multiplier`` variable to the CSS files. Set this to ``1`` when necessary, otherwise ``100``.
+> For reasons beyond comprehension, it is sometimes necessary to use different notation for ``hsl`` in CSS in the Marp VS code preview as compared to the build version sometimes. To mitigate this a ``build-multiplier`` variable is available in the CSS files. Set this to ``1`` when necessary, otherwise ``100``.
 
 #### 📥 In an existing presentation
 1. Download or copy the neobeam.css file into your project OR use the direct link. If using specific themes, do remember they are dependent on the base theme.
@@ -200,7 +200,7 @@ These variables set themselves automatically through using the previously descri
 
 
 ### Title slide
-I opted not to always treat the first slide as a title slide, so to declare a slide (any slide actually) a title slide, add the following before the content: ``<!-- _class: title -->``. 
+In this theme, the first slide is not automatically treated as a title slide. In order to declare a slide (any slide actually) a title slide, add the following before the content: ``<!-- _class: title -->``. 
 
 Heres an example of a title slide. As long as you follow as similar format it should work. Theres also an optional logo slot for a University logo or similar.
 ```html,markdown
@@ -220,13 +220,13 @@ Heres an example of a title slide. As long as you follow as similar format it sh
 Like other images, the logo can be assigned left side too.
 
 ### Footers
-Every page has a footer. It's made from the footer content defined in the beginning of the presentation markdown, and the sections are split by using any type of modifier, such as ``**`` (to create children objects). The footer is a flex-box and I've made it split itself into three sections. You could likely with some modifications change this fairly easily.
+Every page has a footer. It is made from the footer content defined in the beginning of the markdown, and the sections are split by using any type of modifier, such as ``**`` (to create children objects). The footer is a flex-box which divides itself automatically. It supports 3 different sections, but can be expanded to support more.
 
 *note, if you still want bold text in the footer, you can double-wrap it, e.g. write ``****some text****``.*
 ### Math
-I've opted to use KaTeX, and have not styled for other options yet.
+The theme uses KaTeX, and has not been styled for other options yet.
 ### Definitions
-To make LaTeX style bubble definitions I've had to do a slight work around to avoid using HTML in Marp. To define a definition, write the following:
+To make LaTeX style bubble definitions a slight work around has been implemented to avoid using HTML in Marp. To define a definition, write the following:
 ```markdown
     > #### Definition title
     > Definition description
