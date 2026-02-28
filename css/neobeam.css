@@ -172,6 +172,9 @@ footer {
     --height: var(--footer-height);
     
     font-size: 0.65rem;
+
+    /* Add left-hand side spacing for basic footer definitions */
+    text-indent: 0.35rem;
 }
 
 /* The pagination index */
@@ -215,6 +218,9 @@ footer > * {
     
     border-radius: 0 var(--radius) var(--radius) 0;
     padding: 0 var(--text-padding);
+
+    /* Reset indent-based spacing from the footer rule above */
+    text-indent: 0;
     
     z-index: 2;
 }
