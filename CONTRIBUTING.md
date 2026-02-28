@@ -7,8 +7,12 @@ Feel free to do so.
 
 ### 🛠 Prerequisites
 - Git
+
+#### Optionally (highly recommended)
 - Visual Studio Code
 - Marp Extension for Visual Studio Code
+
+If you do not have either of these, you must have adequate knowledge in how to use Marp in other ways. If your changes aren't breaking, it's all the same regardless.
 
 ### Instructions
 Simply clone or fork the repo, create a branch, and follow the instructions of usage in the [readme](README.md).

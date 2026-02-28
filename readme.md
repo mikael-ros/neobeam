@@ -249,3 +249,5 @@ To enable HTML support add or modify the line ``"markdown.marp.html": true`` in 
 ---
 
 **Feel free to contribute** 💙
+
+*No generative AI has been used in the making of this project, nor the text within it. If this changes in the future, this disclaimer will be removed.*
