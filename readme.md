@@ -269,7 +269,7 @@ There is also a special column container called ``column-container--vertical`` w
 When there is nothing but an image in a column, you can use the ``image-column`` class, which makes sure the image takes up the room given to it.
 
 ### QR codes
-When using QR codes, we want pixelated rendering. In most cases, we also would like to keep the positioning persistent on each slide. For this purpose, I have added the ``qr`` class, which can be attached to images, and the ``peristent-qr`` class which can be used like so:
+When using QR codes, we want pixelated rendering. In most cases, we also would like to keep the positioning persistent on each slide. For this purpose, I have added the ``qr`` class, which can be attached to images, and the ``persistent-qr`` class which can be used like so, after enabling HTML:
 
 ```html
 <div class="persistent-qr">
