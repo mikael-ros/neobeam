@@ -216,10 +216,24 @@ Heres an example of a title slide. As long as you follow as similar format it sh
 
 ## Conference/course/e.t.c.
 
-![logo Logo](path/to/logo)
+![logo Logo alt text](path/to/logo)
 ```
 
-Like other images, the logo can be assigned left side too.
+The logo can be manipulated in several ways, such as:
+- ``![logo logo-left Logo alt text](path/to/logo)`` places the image on the left
+- ``![logo logo-rotated Logo alt text](path/to/logo)`` rotates the image
+- ``![logo logo-upper Logo alt text](path/to/logo)`` places the image on the top of the slide
+- ``![logo logo-big Logo alt text](path/to/logo)`` makes the logo larger
+- ``![logo logo-small Logo alt text](path/to/logo)`` makes the logo smaller
+
+These modifiers can be combined to create compound effects, such as:
+- ``![logo logo-big logo-rotated logo-left logo-upper Logo alt text](path/to/logo)`` makes the logo larger, rotated, and placed in the upper left
+
+You can add as many logos as you want, but the maximum amount of non-overlapping ones is four, which you can achieve by using the following combinations:
+- ``![logo Logo alt text](path/to/logo)`` lower right
+- ``![logo logo-left Logo alt text](path/to/logo)`` lower left
+- ``![logo logo-left logo-upper Logo alt text](path/to/logo)`` upper left
+- ``![logo logo-upper Logo alt text](path/to/logo)`` upper right
 
 ### Footers
 Every page has a footer. It is made from the footer content defined in the beginning of the markdown, and the sections are split by using any type of modifier, such as ``**`` (to create children objects). The footer is a flex-box which divides itself automatically. It supports 3 different sections, but can be expanded to support more.
@@ -250,7 +264,7 @@ To enable HTML support add or modify the line ``"markdown.marp.html": true`` in 
 > [!WARNING] 
 > Considering the [security issues mentioned in Marps documentation](https://github.com/marp-team/marp-vscode#enable-html-in-marp-markdown-%EF%B8%8F), this is disabled by default, even in the template. You may need to restart Visual Studio Code after changing the setting. You will need to export in HTML for interactive elements to function.
 
-### Columns
+### Columns and rows
 You can use columns if you enable HTML support. To do so, write:
 
 ```html
@@ -264,9 +278,9 @@ You can use columns if you enable HTML support. To do so, write:
 </div>
 ```
 
-There is also a special column container called ``column-container--vertical`` which turns the columns into rows instead. For ease of use, they are still called columns, since everything else stays the same.
+There is also a another container called ``row-container`` which turns the columns into rows instead. This works regardless if you specify the columns as rows. However, try to rename them to ``row``, as updates to the theme may change this in the future.
 
-When there is nothing but an image in a column, you can use the ``image-column`` class, which makes sure the image takes up the room given to it.
+When there is nothing but an image in a column, you can use the ``image-column`` or ``image-row`` class to add some padding, and the ``img-fill`` class on the image itself to force it to take up room.
 
 ### QR codes
 When using QR codes, we want pixelated rendering. In most cases, we also would like to keep the positioning persistent on each slide. For this purpose, I have added the ``qr`` class, which can be attached to images, and the ``persistent-qr`` class which can be used like so, after enabling HTML:

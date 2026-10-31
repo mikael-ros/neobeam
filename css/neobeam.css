@@ -328,9 +328,7 @@ section.title img[alt*="logo"] {
 
     width: 350px;
     object-fit: contain;
-
-    /* Rotate it slightly */
-    transform: rotate(var(--rotate));
+    
     opacity: 0.5;
 }
 
@@ -338,8 +336,32 @@ section.title img[alt*="logo"] {
 section.title img[alt~="logo-left"] {
     /* Position in lower left */
     right:  unset;
-    left: var(--offset);
-    --rotate: 45deg;
+    left: var(--offset-horizontal);
+    --rotate: 45deg !important; /* Make sure to overwrite any other value for this variable */
+}
+
+section.title img[alt~="logo-upper"] {
+    bottom: unset;
+    top: var(--offset-vertical);
+}
+
+section.title img[alt~="logo-rotated"] {
+    /* Rotate it slightly */
+    transform: rotate(var(--rotate));
+}
+
+section.title img[alt~="logo-big"] {
+    --offset-horizontal: -10%;
+    --offset-vertical: -15%;
+    
+    width: 1000px;
+}
+
+section.title img[alt~="logo-small"] {
+    --offset-horizontal: -3%;
+    --offset-vertical: -3%;
+    
+    width: 200px;
 }
 
 /*-----------------------------------------------------------*/
@@ -561,43 +583,51 @@ audio {
 
 
 /*-----------------------------------------------------------*/
-/***********/
-/* Columns */
-/***********/
+/********************/
+/* Columns and rows */
+/********************/
 
-.column-container, .column-container--vertical {
+.column-size-2, .row-size-2 {
+    flex: 2;
+}
+
+.column-container, .row-container {
     display: flex;
+    flex: 1; /* if nested */
 
     height: 100%;
     width: 100%;
 }
 
-.column-container--vertical {
+.row-container {
     flex-direction: column;
 }
 
-.column-container .column-container {
-    flex: 1;
-}
-
-.column {
+.column, .row, .image-column, .image-row {
     display: flex;
     flex: 1;
+    min-height: 0;
+    min-width: 0;
 
     flex-direction: column;
     justify-content: center;
 }
 
-.column .img-fill {
-    width: 100%;
-
+.column .img-fill, .row .img-fill, .image-column .img-fill, .image-row .img-fill {
     margin: 0; /* Override normal image settings */
     max-width: 100%; /* Override normal image settings */
+    flex: 1 1 0;
+    min-height: 0;
+    height: 0;
 
     object-fit: cover;
 }
 
-.image-column {
+.column .img-fill, .image-column .img-fill {
+    width: 100%;
+}
+
+.image-column, .image-row {
     padding: var(--text-padding);
 }
 

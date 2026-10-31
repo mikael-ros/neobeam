@@ -17,7 +17,7 @@ footer: '**mikael-ros**
 
 ## Version 1.0, 2026
 
-![logo GitHub Logo](../assets/github-mark.svg)
+![logo logo-rotated GitHub Logo](../assets/github-mark.svg)
 
 <p class="watermark">Neobeam theme, by github.com/mikael-ros</p>
 
