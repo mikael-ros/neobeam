@@ -250,6 +250,34 @@ To enable HTML support add or modify the line ``"markdown.marp.html": true`` in 
 > [!WARNING] 
 > Considering the [security issues mentioned in Marps documentation](https://github.com/marp-team/marp-vscode#enable-html-in-marp-markdown-%EF%B8%8F), this is disabled by default, even in the template. You may need to restart Visual Studio Code after changing the setting. You will need to export in HTML for interactive elements to function.
 
+### Columns
+You can use columns if you enable HTML support. To do so, write:
+
+```html
+<div class="column-container">
+    <div class="column">
+        <p>Some cool text<p>
+    </div>
+    <div class="column">
+        <p>Some other cool text<p>
+    </div>
+</div>
+```
+
+There is also a special column container called ``column-container--vertical`` which turns the columns into rows instead. For ease of use, they are still called columns, since everything else stays the same.
+
+When there is nothing but an image in a column, you can use the ``image-column`` class, which makes sure the image takes up the room given to it.
+
+### QR codes
+When using QR codes, we want pixelated rendering. In most cases, we also would like to keep the positioning persistent on each slide. For this purpose, I have added the ``qr`` class, which can be attached to images, and the ``peristent-qr`` class which can be used like so:
+
+```html
+<div class="persistent-qr">
+    <img class="qr" src="qr.png"/>
+    <p>Caption for QR</p>
+</div>
+```
+
 ---
 
 **Feel free to contribute** 💙

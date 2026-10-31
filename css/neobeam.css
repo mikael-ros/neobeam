@@ -92,6 +92,25 @@
     box-sizing: border-box;
 }
 
+/****************************/
+/* Enable/disable watermark */
+/****************************/
+.watermark {
+    display: block; /* change to none to disable! */
+
+    --distance-from-sides: .3rem;
+
+    position: absolute;
+
+    font-size: 0.7rem;
+    color: var(--text-color-lightest);
+
+    left: var(--distance-from-sides);
+    bottom: calc(var(--footer-height) + var(--distance-from-sides));
+
+    opacity: .5;
+}
+
 /*-----------------------------------------------------------*/
 /**********************/
 /* Basic text styling */
@@ -297,14 +316,15 @@ section.title blockquote {
 
 /* Logo */
 section.title img[alt*="logo"] {
-    --offset: -5%;
+    --offset-horizontal: -5%;
+    --offset-vertical: 0%;
     --rotate: -45deg;
 
     /* Position in lower right, by default */
     position: absolute;
     margin: 0;
-    right:  var(--offset);
-    bottom: 0;
+    right:  var(--offset-horizontal);
+    bottom: var(--offset-vertical);
 
     width: 350px;
     object-fit: contain;
@@ -537,4 +557,90 @@ audio {
 
 .katex span {
     /*font: normal 1em var(--math-font); currently unsupported*/
+}
+
+
+/*-----------------------------------------------------------*/
+/***********/
+/* Columns */
+/***********/
+
+.column-container {
+    display: flex;
+
+    gap: var(--text-padding);
+
+    height: 100%;
+    width: 100%;
+}
+
+.column-container--vertical {
+    flex-direction: column;
+}
+
+.column-container .column-container {
+    flex: 1;
+}
+
+.column {
+    display: flex;
+    flex: 1;
+
+    flex-direction: column;
+    justify-content: center;
+}
+
+.column .img-fill {
+    width: 100%;
+
+    margin: 0; /* Override normal image settings */
+    max-width: 100%; /* Override normal image settings */
+
+    object-fit: cover;
+}
+
+.image-column {
+    padding: var(--text-padding);
+}
+
+/*-----------------------------------------------------------*/
+/**********/
+/* Extras */
+/**********/
+.persistent-qr-box {
+    --size: 200px;
+
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+
+    background-color: var(--background-color);
+    border-radius: var(--border-radius-softer);
+    border-top-right-radius: 0;
+
+    padding: .5rem;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    z-index: 999;
+}
+
+.qr {
+    image-rendering: pixelated;
+}
+
+.persistent-qr-box img {
+    margin: 0;
+    width: var(--size);
+    width: var(--size);
+    max-width: 100%;
+}
+
+.persistent-qr-box p {
+    margin: .1rem;
+    font-size: .9em;
 }

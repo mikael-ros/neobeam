@@ -19,6 +19,8 @@ footer: '**mikael-ros**
 
 ![logo GitHub Logo](../assets/github-mark.svg)
 
+<p class="watermark">Neobeam theme, by github.com/mikael-ros</p>
+
 ---
 <!-- header: 'Table of contents' -->
 1. Normal text
@@ -27,6 +29,9 @@ footer: '**mikael-ros**
 4. Tables
 5. Images
 6. HTML stuff
+
+<p class="watermark">Neobeam theme, by github.com/mikael-ros</p>
+
 ---
 <!-- header: 'Normal text' -->
 **This** is what a regular slide can look like in Neobeam.
@@ -39,16 +44,21 @@ A set of cool letters:
 3. C
 
 A quote from media
-> *"Listen to me, olive oil"* - Daryl Dixon
+> *"Listen to me, olive oyl"* - Daryl Dixon
+
+<p class="watermark">Neobeam theme, by github.com/mikael-ros</p>
 
 ---
 <!-- header: 'Code blocks' -->
 We can define ``variables`` inline, and code in blocks (with syntax highlighting!!!):
 ```java
     if (marp) {
-        apply.neobeam();
+        apply(neobeam);
     }
 ```
+
+<p class="watermark">Neobeam theme, by github.com/mikael-ros</p>
+
 ---
 <!-- header: 'Mathematics corner' -->
 ## Formulas
@@ -61,6 +71,8 @@ Blockquotes with level 4 (####) headings inside get translated to definitions li
 > #### Vector
 > A collection of numbers
 
+<p class="watermark">Neobeam theme, by github.com/mikael-ros</p>
+
 ---
 <!-- header: 'Data' -->
 Tables are also decorated in this theme!
@@ -70,6 +82,9 @@ Tables are also decorated in this theme!
 | Some        |  Cool       | Data          |
 | Some        |  Cool       | Data          |
 | Some        |  Cool       | Data          |
+
+<p class="watermark">Neobeam theme, by github.com/mikael-ros</p>
+
 ---
 <!-- header: 'Images' -->
 
@@ -77,6 +92,8 @@ Tables are also decorated in this theme!
 
 Images can be left-aligned, centered, and right-aligned! 
 *Photo by Joshua J. Cotten on Unsplash.*
+
+<p class="watermark">Neobeam theme, by github.com/mikael-ros</p>
 
 ---
 <!-- header: 'HTML wonderland' -->
@@ -89,3 +106,5 @@ Text can be <mark>marked</mark>, <abbr title="abbreviated">abbr</abbr> and you c
 You can embed audio like:
 <audio controls src="http://codeskulptor-demos.commondatastorage.googleapis.com/pang/pop.mp3" type="audio/mp3">
 </audio> 
+
+<p class="watermark">Neobeam theme, by github.com/mikael-ros</p>
