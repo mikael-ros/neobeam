@@ -295,6 +295,7 @@ section.title {
 section.title > * {
     margin: 0;
     font-weight: 500;
+    z-index: 999;
 }
 
 /* Title blob */
