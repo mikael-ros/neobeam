@@ -565,10 +565,8 @@ audio {
 /* Columns */
 /***********/
 
-.column-container {
+.column-container, .column-container--vertical {
     display: flex;
-
-    gap: var(--text-padding);
 
     height: 100%;
     width: 100%;
