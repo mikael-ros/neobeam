@@ -315,11 +315,19 @@ section.title blockquote {
     color: var(--text-color-lightest);
 }
 
+
+/*-----------------------------------------------------------*/
+/********/
 /* Logo */
-section.title img[alt*="logo"] {
+/********/
+img[alt*="logo"] {
     --offset-horizontal: -5%;
     --offset-vertical: 0%;
     --rotate: -45deg;
+
+    --logo-size-small: 160px;
+    --logo-size-medium: 300px;
+    --logo-size-big: 900px;
 
     /* Position in lower right, by default */
     position: absolute;
@@ -327,42 +335,55 @@ section.title img[alt*="logo"] {
     right:  var(--offset-horizontal);
     bottom: var(--offset-vertical);
 
-    width: 350px;
+    width: var(--logo-size-medium);
     object-fit: contain;
     
     opacity: 0.5;
 }
 
 /* Logo left side */
-section.title img[alt~="logo-left"] {
+img[alt~="logo-left"] {
     /* Position in lower left */
     right:  unset;
     left: var(--offset-horizontal);
     --rotate: 45deg !important; /* Make sure to overwrite any other value for this variable */
 }
 
-section.title img[alt~="logo-upper"] {
+img[alt~="logo-upper"] {
     bottom: unset;
     top: var(--offset-vertical);
 }
 
-section.title img[alt~="logo-rotated"] {
+img[alt~="logo-rotated"] {
     /* Rotate it slightly */
     transform: rotate(var(--rotate));
 }
 
-section.title img[alt~="logo-big"] {
+img[alt~="logo-big"] {
     --offset-horizontal: -10%;
     --offset-vertical: -15%;
     
-    width: 1000px;
+    width: var(--logo-size-big);
 }
 
-section.title img[alt~="logo-small"] {
+img[alt~="logo-small"] {
     --offset-horizontal: -3%;
     --offset-vertical: -3%;
     
-    width: 200px;
+    width: var(--logo-size-small);
+}
+
+img[alt~="logo-corner-offset"] {
+    --offset-horizontal: var(--footer-height) !important;
+    --offset-vertical: calc(var(--footer-height)*2) !important;
+}
+
+img[alt~="logo-upper"][alt~="logo-corner-offset"] {
+    --offset-vertical: var(--footer-height) !important;
+}
+
+img[alt~="logo-opaque"] {
+    opacity: 1;
 }
 
 /*-----------------------------------------------------------*/

@@ -225,6 +225,8 @@ The logo can be manipulated in several ways, such as:
 - ``![logo logo-upper Logo alt text](path/to/logo)`` places the image on the top of the slide
 - ``![logo logo-big Logo alt text](path/to/logo)`` makes the logo larger
 - ``![logo logo-small Logo alt text](path/to/logo)`` makes the logo smaller
+- ``![logo logo-corner-offset Logo alt text](path/to/logo)`` makes the logo place squarely in a corner of the slide
+- ``![logo logo-opaque Logo alt text](path/to/logo)`` makes the logo opaque
 
 These modifiers can be combined to create compound effects, such as:
 - ``![logo logo-big logo-rotated logo-left logo-upper Logo alt text](path/to/logo)`` makes the logo larger, rotated, and placed in the upper left
